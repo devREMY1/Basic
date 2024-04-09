@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="icon" href="./img/xiii.jpg" type="image/png" />
+    <title>Resume</title>
+  </head>
+  <!-- Тело Сайта -->
+  <body>
+    <div class="wrapper">
+      <!-- Заголовок Сайта -->
+      <header class="header">
+        <!-- Контейнер Заголовка -->
+        <div class="header__container container">
+          <img
+            src="./img/IMG-20191213-WA0036.jpg"
+            alt="image vladilen minin"
+            class="header__img wow animate__animated animate__fadeInLeft animate__delay-0.5s"
+          />
+          <!-- Контейнер с Текстом Заголовка -->
+          <div
+            class="header__container-text wow animate__animated animate__fadeInRight animate__delay-1s"
+          >
+            <h1 class="header__name">Андрей Максюта</h1>
+            <p class="header__subscription">
+              Я люблю путешестовать, заниматься спортом и программировать
+            </p>
+            <p class="header__social">Мои социальные сети</p>
+            <!-- Контейнер Социальные Сети -->
+            <div class="header__container-link">
+              <a
+                href="https://www.instagram.com/nzn.andrey/"
+                target="_blank"
+                class="header__lnk-inst"
+                >Instagram</a
+              >
+              |
+              <a
+                href="https://t.me/botREMY"
+                target="_blank"
+                class="header__lnk-telegram"
+                >Telegram</a
+              >
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Основа Сайта-->
+      <main class="main">
+        <!-- Контейнер Мои Хобби -->
+        <div
+          class="main__container-hobby container wow animate__animated animate__bounceInLeft animate__delay-0.5s"
+        >
+          <div class="main__hobby-block">
+            <h2 class="main__hobby-title title">Мои хобби</h2>
+            <ol class="main__hobby-list">
+              <li class="main__hobby-item">Видеомонтаж</li>
+              <li class="main__hobby-item">Игра на гитаре</li>
+              <li class="main__hobby-item">Спорт: Бег, ММА, Бокс</li>
+              <li class="main__hobby-item">Путешествия</li>
+            </ol>
+          </div>
+        </div>
+        <!-- Контейнер Опыт работы -->
+        <div
+          class="main__container-experience container wow animate__animated animate__bounceInRight animate__delay-1s"
+        >
+          <div class="main__experience-block">
+            <h2 class="main__experience-title title">Опыт работы</h2>
+            <hr />
+            <!-- Таблица с Опытом Работы -->
+            <table class="main__experience-table" border="1px">
+              <tr>
+                <td>Kopitsa</td>
+                <td>System Administartor</td>
+                <td>03 /2023 - 11 /2023</td>
+              </tr>
+              <tr>
+                <td>Apple Home</td>
+                <td>Content Manager</td>
+                <td>11 /2023 - 03 /2024</td>
+              </tr>
+            </table>
+            <hr />
+          </div>
+        </div>
+        <!-- Контейнер Ютуб Проигрыватель -->
+        <div
+          class="main__container-youtube container wow animate__animated animate__bounceInLeft animate__delay-1s"
+        >
+          <div class="main__youtube-block">
+            <h2 class="main__youtube-title title">Youtube</h2>
+            <!-- Контейнер с Ютуб Плеером -->
+            <div class="main__video-container">
+              <div class="main__video">
+                <iframe
+                  src="https://www.youtube.com/embed/yinzhPb7pd4?enablejsapi=1"
+                  frameborder="0"
+                  allowfullscreen
+                  allow="autoplay"
+                ></iframe>
+                <img
+                  src="https://toys-kopitsa.com.ua/image/catalog/youtube/group.png"
+                  alt="#"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <hr>
+      <!-- Подвал Сайта -->
+      <footer class="footer wow animate__animated animate__bounceInRight ">
+        <div class="footer__container container ">
+          <h2 class="footer__title title">Связаться со мной</h2>
+          <!-- Форма Отправки Сообщения -->
+          <form id="tg" class="footer__form">
+            <div class="footer__form-input-block">
+              <!-- Поле Ввода Имени -->
+              <div class="footer__form-name">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Введите имя"
+                />
+                <hr />
+              </div>
+              <!-- Поле Ввода Почты -->
+              <div class="footer__form-email">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Введите Email"
+                />
+                <hr />
+              </div>
+            </div>
+            <!-- Поле Ввода Сообщения -->
+            <textarea
+              class="footer__"
+              id="text"
+              name="text"
+              cols="50%"
+              rows="5"
+              placeholder="Ваше Сообщение"
+            ></textarea>
+            <hr />
+            <br />
+            <!-- Кнопка Отправки Формы -->
+            <input
+              class="footer__form-button"
+              type="submit"
+              value="Связаться"
+            />
+          </form>
+          <!-- Всплывающее сообщение про успешную отправку -->
+          <div
+            class="footer__form-success animate__animated animate__backInRight"
+            id="success"
+          >
+            Сообщение отправлено !
+          </div>
+          <!-- Всплывающее сообщение про Ошибку заполнения всех полей -->
+          <div
+            class="footer__form-clear  animate__animated animate__backInRight"
+            id="clear"
+          >
+            ERROR: Заполните все поля !
+          </div>
+          <!-- Всплывающее сообщение про Ошибку заполнения поля "Введите сообщение" -->
+          <div
+            class="footer__form-clear-text animate__animated animate__backInRight"
+            id="clear_text"
+          >
+            ERROR: Введите ваше Сообщение !
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Подключение Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script/script.js"></script>
+    <script src="./script/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>

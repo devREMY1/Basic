@@ -1,0 +1,373 @@
+// Файл обнуляющих стилей
+@import "nullstyle.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+//Linear-gradient
+:root {
+  --instagram-text-gradient: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+/* Создаем градиент для текстового цвета Telegram значка и сохраняем его в переменной */
+:root {
+  --telegram-text-gradient: linear-gradient(45deg, #0088cc, #00a8e0);
+}
+
+body {
+  background: #f1f1f1;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2%;
+
+  height: 100vh;
+
+  font-family: Montserrat;
+  font-size: 18px;
+
+  display: flex;
+  flex-direction: column;
+}
+.container {
+}
+.header {
+  &__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+  }
+
+  &__img {
+    width: 280px;
+    height: 340px;
+    border-radius: 20%;
+    padding: 2%;
+  }
+
+  &__container-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  &__name {
+    font-size: 40px;
+    font-weight: 500;
+    padding: 0 0 5% 0;
+  }
+
+  &__subscription {
+    padding: 0 0 5%;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: #86898f;
+  }
+
+  &__social {
+    padding: 0 0 2%;
+
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__container-link {
+    font-weight: 550;
+  }
+
+  &__lnk-inst {
+    transition: all 1s;
+    color: #303030;
+  }
+
+  &__lnk-inst:active {
+    background: var(--instagram-text-gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.1s;
+  }
+
+  &__lnk-telegram {
+    transition: all 1s;
+    color: #303030;
+  }
+
+  &__lnk-telegram:active {
+    background: var(--telegram-text-gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: all 0.1s;
+  }
+}
+.title {
+  padding: 0 0 10px 0;
+  font-size: 24px;
+  font-weight: 450;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  &__container-hobby {
+    background: #fff9dc;
+    border-radius: 20px;
+    padding: 2%;
+  }
+
+  &__hobby-block {
+  }
+
+  &__hobby-title {
+  }
+
+  &__hobby-list {
+    padding: 0 0 0 20px;
+    color: #86898f;
+  }
+
+  &__hobby-item {
+    padding: 3px 0;
+  }
+
+  &__container-experience {
+    margin: 5% 0;
+    background: #e4ffdc;
+    border-radius: 20px;
+    padding: 2%;
+  }
+
+  &__experience-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  &__experience-title {
+  }
+
+  hr {
+    border: 0.1px solid #86898f;
+  }
+
+  &__experience-table {
+    padding: 1%;
+  }
+
+  &__experience-table td {
+    padding: 0 0 10px 0;
+  }
+  &__experience-table td:not(:first-child) {
+    color: #86898f;
+  }
+
+  &__container-youtube {
+    margin: 0 0 5% 0;
+    background: #ffdcdc;
+    border-radius: 20px;
+    padding: 2%;
+  }
+
+  &__youtube-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__youtube-title {
+  }
+
+  &__video-container {
+    display: flex;
+    max-width: 100%;
+  }
+  &__video {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    margin-right: 10px;
+    transition:
+      width 0.3s,
+      height 0.3s;
+  }
+  &__video iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  &__video img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+  }
+}
+hr {
+  border: 0.5px solid #111;
+}
+.footer {
+  hr {
+    border: 0.5px solid #86898f;
+  }
+
+  &__container {
+    max-width: 1000px;
+    margin: 5% auto;
+    padding: 0 0 5% 0;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 27px;
+  }
+
+  &__form {
+  }
+
+  &__form-input-block {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 0 2% 0;
+  }
+
+  &__form-name {
+    width: 50%;
+    margin: 0 5% 0 0;
+  }
+
+  &__form-email {
+    width: 50%;
+  }
+
+  &__form input:not(:last-child) {
+    background-color: #f1f1f1;
+    font-size: 20px;
+    width: 100%;
+    padding: 1% 0;
+  }
+
+  &__form textarea {
+    background-color: #f1f1f1;
+    width: 100%;
+    font-size: 20px;
+  }
+
+  &__form-button {
+    padding: 0.5% 2%;
+    color: white;
+    background: black;
+    border-radius: 10px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  &__form-button:active {
+    border: 1px solid black;
+    color: black;
+    background: none;
+    border-radius: 10px;
+    transition: all 0.1s;
+  }
+  &__form-success {
+    position: fixed;
+    bottom: 10%;
+    right: 1%;
+    font-weight: 500;
+    background: #7eff9c;
+    border-radius: 10px;
+    padding: 2%;
+    display: none;
+  }
+  &__form-clear {
+    position: fixed;
+    bottom: 10%;
+    right: 1%;
+    font-weight: 500;
+    background: #ff7e7e;
+    border-radius: 10px;
+    padding: 2%;
+    display: none;
+  }
+  &__form-clear-text {
+    position: fixed;
+    bottom: 10%;
+    right: 1%;
+    font-weight: 500;
+    background: #ff7e7e;
+    border-radius: 10px;
+    padding: 2%;
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .wrapper {
+    max-width: 100%;
+    padding: 2%;
+    font-size: 15px;
+  }
+
+  .title {
+    padding: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .header {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      max-width: 100%;
+    }
+
+    &__img {
+      max-width: 250px;
+      max-height: 270px;
+      border-radius: 20%;
+    }
+
+    &__container-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
+    }
+
+    &__name {
+      font-size: 30px;
+      font-weight: 500;
+      padding: 0 0 5% 0;
+    }
+
+    &__subscription {
+      padding: 0 0 5%;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 500;
+      color: #86898f;
+    }
+
+    &__social {
+      padding: 0 0 2%;
+
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    &__container-link {
+      font-weight: bold;
+    }
+  }
+
+  .footer__form-button {
+    width: 100%;
+    padding: 2% 0;
+    font-size: 24px;
+  }
+}
