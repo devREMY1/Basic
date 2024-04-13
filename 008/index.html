@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Рецепты Академии</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container container__header">
+          <h1 class="header__logo"><a href="#" title="Логотип">Рецепты</a></h1>
+          <nav class="menu">
+            <ol class="menu__list">
+              <li class="menu__item">
+                <a title="Ингредиенты" href="#Ingredients">Ингредиенты</a>
+              </li>
+              <li class="menu__item">
+                <a title="Инструкция приготовления" href="#Cooking instructions"
+                  >Инструкция приготовления</a
+                >
+              </li>
+              <li class="menu__item">
+                <a title="Советы к рецепту" id="Recipe Tips" href="#tips"
+                  >Советы к рецепту</a
+                >
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </header>
+      <main class="main">
+        <div class="container main">
+          <section class="ricipe-history">
+            <h2 class="ricipe-history__title">История к рецепту</h2>
+            <p class="ricipe-history__text">
+              Как-то раз мы поспорили с другом, что я смогу приготовить лазанью
+              ни разу не открыв никаких рецептов. Я держала слово,
+            </p>
+
+            <details close="" class="recipe-history__details">
+              <summary></summary>
+              <h3 class="recipe-history__details-title">
+                История к рецепту «Лазанья классическая с мясом»
+              </h3>
+
+              <p class="recipe-history__details-text">
+                Как-то раз мы поспорили с другом, что я смогу приготовить
+                лазанью ни разу не открыв никаких рецептов. Я держала слово, не
+                открыла ни одного кулинарного сайта, но до дня Х, дня готовки,
+                ежедневно в течение 5 дней ела в разных местах лазанью. Итак,
+                день настал, я позвонила другу и перечислила все, что мне нужно
+                будет для приготовления. Я купила только фарш: именно
+                свинина+телятина: так получится сочнее, подумала я. Соус
+                бешамель я и раньше делала и для других блюд. Болоньезе я
+                использовала из банки, решила, что могу накосячить в его
+                приготовлении (теперь готовлю уже и сама). И вот, наконец,
+                дверца духовки захлопнулась за противнем..Было много народу, все
+                хотели скорее попробовать — слишком уж ароматно пахло. У меня
+                появилась возможность посмотреть-таки рецепты в интеренте... Я
+                набрала в google «классическая лазанья» и поледенела: в каждом
+                без исключения рецепте была строчка «выкладываем слегка
+                отваренные листы лазаньи» или «листы отварить 2 минуты»... Я в
+                шоке посмотрела на духовку и поняла, что дороги назад уже все
+                равно нет.. Через 30 минут мы достали под аплодисменты
+                противень, и я принялась резать. Каково же было мое удивление,
+                когда я раскладывала нежнейшие куски по тарелкам. Она
+                пропеклась, пропиталась и была лучшей лазаньей, которую я ела в
+                своей жизни! Так что выкладывайте листы смело прямо из пачек,
+                главное — много вкусной начинки и любви!:)
+              </p>
+            </details>
+          </section>
+          <hr />
+          <section class="kilocalories">
+            <h2 class="kilocalories__title">
+              ЭНЕРГЕТИЧЕСКАЯ ЦЕННОСТЬ НА ПОРЦИЮ
+            </h2>
+            <table class="kilocalories__table" id="Ingredients">
+              <tr>
+                <td>КАЛОРИЙНОСТЬ</td>
+                <td>БЕЛКИ</td>
+                <td>ЖИРЫ</td>
+                <td>УГЛЕВОДЫ</td>
+              </tr>
+              <tr>
+                <td class="kilocalories__size">965</td>
+                <td class="kilocalories__size">50</td>
+                <td class="kilocalories__size">73</td>
+                <td class="kilocalories__size">24</td>
+              </tr>
+              <tr>
+                <td class="kilocalories__quantity">ККАЛ</td>
+                <td class="kilocalories__quantity">ГРАММ</td>
+                <td class="kilocalories__quantity">ГРАММ</td>
+                <td class="kilocalories__quantity">ГРАММ</td>
+              </tr>
+            </table>
+          </section>
+          <hr />
+          <section class="ingredients">
+            <h2 class="ingredients__title">ИНГРЕДИЕНТЫ</h2>
+            <table class="ingredients__table">
+              <tr>
+                <th>Мясной фарш</th>
+                <td>600 г</td>
+              </tr>
+              <tr>
+                <th>Соус болоньезе</th>
+                <td>600 г</td>
+              </tr>
+              <tr>
+                <th>Сливочное масло</th>
+                <td>60 г</td>
+              </tr>
+              <tr>
+                <th>Пшеничная мука</th>
+                <td>2,5 столовые ложки</td>
+              </tr>
+              <tr>
+                <th>Оливковое масло</th>
+                <td>2 столовые ложки</td>
+              </tr>
+              <tr>
+                <th>Молоко</th>
+                <td>750 мл</td>
+              </tr>
+              <tr>
+                <th>Готовые сухие листы лазаньи</th>
+                <td>10 штук</td>
+              </tr>
+              <tr>
+                <th>Твердый сыр</th>
+                <td>500 г</td>
+              </tr>
+            </table>
+          </section>
+          <section class="coocking-instruction" id="Cooking instructions">
+            <h2 class="cooking-instruction__title">Инструкция приготовления</h2>
+            <ol class="coocking-instruction__list">
+              <li class="cooking-instruction__item">
+                <div class="cooking-instruction__item-container">
+                  <img
+                    src="https://eda.ru/images/RecipeStep/434x295/lazanja-klassicheskaja-s-mjasom_31799_step_1.webp"
+                    alt="сотейник в который кладут сливочное масло"
+                  />
+                  <p>
+                    В сотейник положить сливочное масло и 2 ложки растительного
+                    масла, растопить. Постепенно добавлять муку и размешивать
+                    так, чтобы не оставалось комочков.
+                  </p>
+                </div>
+              </li>
+              <li class="cooking-instruction__item">
+                <div class="cooking-instruction__item-container">
+                  <img
+                    src="https://eda.ru/images/RecipeStep/434x295/lazanja-klassicheskaja-s-mjasom_31799_step_2.webp"
+                    alt="изображение сотейника с торчащим венчиком и  соусом в который вливают молоко "
+                  />
+                  <p>
+                    Когда вся мука вмешана, влить все молоко. Убавить огонь и
+                    томить до нужной консистенции: не жидкой, но и не слишком
+                    густой. Важно постоянно помешивать соус, чтобы он не
+                    пригорел. Консистенция нежирной сметаны.
+                  </p>
+                </div>
+              </li>
+              <li class="cooking-instruction__item">
+                <div class="cooking-instruction__item-container">
+                  <img
+                    src="https://eda.ru/images/RecipeStep/434x295/lazanja-klassicheskaja-s-mjasom_31799_step_3.webp"
+                    alt="изображение сковороды с фаршем и лопаткой в нем"
+                  />
+                  <p>
+                    На сковороде раскалить оливковое масло. Добавить мясной фарш
+                    (лучше свинина+телятина).
+                  </p>
+                </div>
+              </li>
+              <li class="cooking-instruction__item">
+                <div class="cooking-instruction__item-container">
+                  <img
+                    src="https://eda.ru/images/RecipeStep/434x295/lazanja-klassicheskaja-s-mjasom_31799_step_4.webp"
+                    alt="изображение фарша с соусом который мешают лопаткой в сковороде  "
+                  />
+                  <p>
+                    Фарш жарить до полуготовности. Влить в него соус болоньезе,
+                    посолить и поперчить по вкусу.
+                  </p>
+                </div>
+              </li>
+              <li class="cooking-instruction__item">
+                <div class="cooking-instruction__item-container">
+                  <img
+                    src="https://eda.ru/images/RecipeStep/434x295/lazanja-klassicheskaja-s-mjasom_31799_step_5.webp"
+                    alt="изображение формы которую смазали сливочным маслои и на дно кладут соус с помощью ложки"
+                  />
+                  <p>
+                    Духовку разогреть до 180 градусов. Форму смазать сливочным
+                    маслом. На дно вылить немного соуса бешамель, чуть-чуть,
+                    только чтобы покрыть дно.
+                  </p>
+                </div>
+              </li>
+              <li class="cooking-instruction__item">
+                <div class="cooking-instruction__item-container">
+                  <img
+                    src="https://eda.ru/images/RecipeStep/434x295/lazanja-klassicheskaja-s-mjasom_31799_step_6.webp"
+                    alt="изображение формы для запикания в которую выкладывают пласты для лазаньи"
+                  />
+                  <p>
+                    Выложить пласты (не вареные). На пласты выложить
+                    получившийся фарш (не жалеем!), на фарш — натертый сыр. На
+                    сыр — соус бешамель.
+                  </p>
+                </div>
+              </li>
+              <li class="cooking-instruction__item">
+                <div class="cooking-instruction__item-container">
+                  <img
+                    src="https://eda.ru/images/RecipeStep/434x295/lazanja-klassicheskaja-s-mjasom_31799_step_7.webp"
+                    alt="изображение формы с лазанью на котором показывается как нужно наносить слои соуса"
+                  />
+                  <p>
+                    Соуса нужно выкладывать столько, сколько необходимо, на ваш
+                    взгляд, чтобы лазанья получилась сочной. Поверх соуса
+                    выложить сухие листы лазаньи. Повторить процедуру.
+                  </p>
+                </div>
+              </li>
+              <li class="cooking-instruction__item">
+                <div class="cooking-instruction__item-container">
+                  <img
+                    src="https://eda.ru/images/RecipeStep/434x295/lazanja-klassicheskaja-s-mjasom_31799_step_8.webp"
+                    alt="человек кладет последний слой сыра на лазанью"
+                  />
+                  <p>
+                    Последний слой листов промазать соусом бешамель и сверху
+                    щедро засыпать сыром. Дать постоять минут 7–10. Поставить в
+                    духовку. Печь 30 минут.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </section>
+          <article class="tips" id="tips">
+            <h2 class="tips__title">СОВЕТ К РЕЦЕПТУ</h2>
+            <p class="tips__text">
+              Обязательно старайтесь промазывать хорошенько края сухих листов:
+              иначе получится суховато.
+            </p>
+          </article>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container container__footer">
+          <p>ДЛЯ ЛИЦ СТАРШЕ 18 ЛЕТ</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
