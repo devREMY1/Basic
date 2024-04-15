@@ -1,0 +1,64 @@
+body {
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article *:hover {
+  background: rebeccapurple;
+  cursor: pointer;
+}
+
+.general {
+  position: relative;
+  width: 500px;
+  height: 500px;
+
+  background-color: black;
+}
+
+a[href^="https://"]:hover::after
+{
+  content: "🔐";
+}
+
+a[href*="https://"]
+{
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  width: 100%;
+  transition: all 0.5s;
+  bottom: 0;
+}
+
+.container ul > button::after {
+  content: "🔥";
+}
+
+#lakalut {
+  background-color: palevioletred;
+}
+
+section:nth-child(2) ul {
+  color: white;
+  list-style: none;
+}
+
+section:nth-child(2) [title|="text-li"] {
+  color: yellowgreen;
+}
+section:nth-child(2) [title|="text-li-toha"] {
+  color: red;
+}
+
+section + div {
+  background-color: aquamarine;
+}
