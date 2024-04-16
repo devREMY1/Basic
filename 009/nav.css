@@ -33,3 +33,6 @@ body {
 .menu__item a:focus {
   text-decoration: underline 5px;
 }
+a:visited {
+  color: purple;
+}
