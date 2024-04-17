@@ -18,6 +18,10 @@ section * {
   margin: 0; /*убирает отступы у элементов h1, p */
 }
 
+h1 {
+  font-size: 40px;
+}
+
 p {
   padding: 5px;
   text-indent: 2em; /* отступт относительно font-size: 20px элемента section */
