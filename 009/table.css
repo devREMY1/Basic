@@ -1,0 +1,21 @@
+/* Стилі для парних рядків таблиці */
+tr:nth-child(even) {
+  background-color: #000000;
+  color: white;
+}
+
+/* Стилі для непарних рядків таблиці */
+tr:nth-child(odd) {
+  background-color: #7b28ff;
+  color: white;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
