@@ -24,6 +24,7 @@ h1 {
 }
 
 p {
+  line-height: 2rem;
   padding: 5px;
   text-indent: 2em; /* отступт относительно font-size: 20px элемента section */
   text-align: justify;
