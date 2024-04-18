@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_cJD3gTD_vx3rCubqg.woff2")
+    format("woff2"); /* посилання на файл шрифту Montserrat Regular у форматі WOFF2 */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_cJD3g3D_u50.woff2")
+    format("woff2"); /* посилання на файл шрифту Montserrat Bold у форматі WOFF2 */
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
