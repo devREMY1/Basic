@@ -17,3 +17,8 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+section:nth-child(3) {
+  font-family: "Source Code Pro", monospace;
+  font-size: 2rem;
+}
