@@ -19,7 +19,7 @@ body {
   font-size: 2rem;
 }
 
-section:nth-child(3) {
+section:nth-child(3) * {
   font-family: "Source Code Pro", monospace;
-  
+  font-weight: bold;
 }
