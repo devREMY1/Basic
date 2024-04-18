@@ -19,6 +19,18 @@ body {
   font-size: 2rem;
 }
 
+h1 {
+  color: #9500ff;
+  font-size: 3rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+h1:active {
+  color: #ff0000;
+  transition: all 0.5s;
+}
+
 section:nth-child(3) * {
   font-family: "Source Code Pro", monospace;
   font-weight: bold;
