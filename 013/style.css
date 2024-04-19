@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+body {
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgb(255, 123, 123),
+    rgb(100, 200, 100),
+    rgb(120, 50, 200)
+  );
+  height: 100vh;
+  margin: 0 auto;
+  font-family: source code pro;
+  font-size: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: start;
+}
+
+h1 {
+  position: absolute;
+  margin: 0;
+  padding: 1%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+article {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 0;
+}
+P {
+  color: hsla(0, 0%, 100%, 0.816);
+  text-align: end;
+  margin: 0;
+  font-size: 1em;
+}
