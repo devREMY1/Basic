@@ -62,3 +62,23 @@ P {
   margin: 0;
   font-size: 1em;
 }
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 0 100px 0;
+}
+aside > p {
+  background: linear-gradient(
+    90deg,
+    rgb(25, 232, 255),
+    rgb(0, 0, 0),
+    rgb(0, 0, 0)
+  );
+  box-shadow: 0px 0px 20px -3px black;
+  padding: 30px;
+  border-radius: 55px;
+  width: 800px;
+  text-align: justify;
+}
