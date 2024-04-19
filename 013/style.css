@@ -20,13 +20,28 @@ nav {
 
 h1 {
   position: absolute;
-  margin: 0;
-  padding: 1%;
+  padding: 0 1%;
 }
 
 a {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
+  border: 7px solid rgb(255, 255, 255);
+  border-radius: 60px;
+  padding: 10%;
+}
+
+img {
+  margin: 5% 0 0 0;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 55px;
+  box-shadow: 0px 0px 20px -3px black;
+}
+
+.text__container {
+  display: flex;
+  flex-direction: column;
 }
 
 article {
@@ -42,8 +57,8 @@ h2 {
   margin: 0;
 }
 P {
-  color: hsla(0, 0%, 100%, 0.816);
   text-align: end;
+  color: hsla(0, 0%, 100%, 0.816);
   margin: 0;
   font-size: 1em;
 }
