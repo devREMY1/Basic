@@ -28,8 +28,8 @@ h1 {
   min-width: 100px;
   min-height: 100px;
 
-  background: rgba(163, 151, 255, 0.373);
-  color: hwb(0 100% 0%);
+  background: rgb(163, 151, 255);
+  color: rgb(255, 255, 255);
 }
 
 h2 {
@@ -39,7 +39,7 @@ h2 {
   min-width: 100px;
   min-height: 100px;
   background: rgb(82, 148, 254);
-  color: hwb(0 100% 0%);
+  color: hsl(0, 0%, 100%);
 }
 section:nth-child(1) > p {
   display: flex;
@@ -48,7 +48,7 @@ section:nth-child(1) > p {
   min-width: 100px;
   min-height: 100px;
   background: rgb(251, 255, 176);
-  color: hwb(0 28% 72% / 0.993);
+  color: hsl(0, 0%, 25%);
 }
 :nth-child(2) p {
   display: flex;
@@ -57,5 +57,5 @@ section:nth-child(1) > p {
   min-width: 100px;
   min-height: 100px;
   background: rgb(255, 162, 76);
-  color: hwb(0 100% 0% / 0.993);
+  color: rgb(53, 156, 56);
 }
