@@ -41,6 +41,7 @@ h2 {
   background: rgb(82, 148, 254);
   color: hsl(0, 0%, 100%);
   border: 5px solid rgb(255, 255, 93);
+  box-shadow: 1px 1px 25px -5px rgb(46, 46, 46);
 }
 section:nth-child(1) > p {
   display: flex;
