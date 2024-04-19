@@ -38,8 +38,14 @@ h2 {
   align-items: center;
   min-width: 100px;
   min-height: 100px;
-  background: rgb(82, 148, 254);
-  color: hsl(0, 0%, 100%);
+  background: rgb(1, 0, 10);
+  background: linear-gradient(
+    90deg,
+    rgb(4, 0, 36) 0%,
+    rgb(17, 17, 75) 27%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: hsla(0, 0%, 100%, 0.889);
   border: 5px solid rgb(255, 255, 93);
   box-shadow: 1px 1px 25px -5px rgb(46, 46, 46);
 }
