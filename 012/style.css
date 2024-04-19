@@ -15,7 +15,6 @@ body {
 h1,
 h2,
 p {
-  border: 1px solid black;
   font-size: 2rem;
   font-weight: bold;
   padding: 10px;
@@ -30,6 +29,7 @@ h1 {
 
   background: rgb(163, 151, 255);
   color: rgb(255, 255, 255);
+  border: 5px solid rgb(171, 255, 93);
 }
 
 h2 {
@@ -40,6 +40,7 @@ h2 {
   min-height: 100px;
   background: rgb(82, 148, 254);
   color: hsl(0, 0%, 100%);
+  border: 5px solid rgb(255, 255, 93);
 }
 section:nth-child(1) > p {
   display: flex;
@@ -49,6 +50,7 @@ section:nth-child(1) > p {
   min-height: 100px;
   background: rgb(251, 255, 176);
   color: hsl(0, 0%, 25%);
+  border: 5px solid rgb(185, 93, 255);
 }
 :nth-child(2) p {
   display: flex;
@@ -58,4 +60,5 @@ section:nth-child(1) > p {
   min-height: 100px;
   background: rgb(255, 162, 76);
   color: rgb(53, 156, 56);
+  border: 5px solid rgb(93, 158, 255);
 }
