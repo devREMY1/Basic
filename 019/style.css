@@ -224,7 +224,7 @@ h6 {
   border-radius: 20px;
   z-index: 2;
   text-align: justify;
-  width: 300px;
+  max-width: 300px;
 }
 .info__block:not(:last-child) {
   margin-right: 1%;
