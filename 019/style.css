@@ -196,7 +196,7 @@ h6 {
 }
 .info__title {
   padding-bottom: 5%;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
 }
 .info__body {
   display: flex;
@@ -208,7 +208,10 @@ h6 {
 }
 .info__body::before {
   content: "";
-  background: rgba(0, 0, 0, 0.525);
+  background-image: url(./003-Teacher.svg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: contain;
   border-radius: 20px;
   position: absolute;
   width: 100%;
@@ -216,6 +219,9 @@ h6 {
   z-index: 1;
 }
 .info__block {
+  background: rgba(0, 0, 0, 0.661);
+  padding: 1%;
+  border-radius: 20px;
   z-index: 2;
   text-align: justify;
   width: 300px;
