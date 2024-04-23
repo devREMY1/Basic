@@ -106,11 +106,37 @@ body {
   margin: 0 auto;
 
   overflow: hidden;
+}
+
+.menu {
+  position: fixed;
+  width: 100%;
+  background: #19191966;
+}
+
+.menu__list {
+  list-style: none;
+
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
 
-  position: relative;
+  font-weight: bold;
+
+  padding: 2%;
+}
+
+.menu__item a {
+  color: white;
+  transition: all 0.4s;
+}
+.menu__item a:active {
+  color: rgba(255, 255, 255, 0.494);
+  transition: all 0.1s;
+}
+
+.menu__item:not(:last-child) {
+  margin: 0 50px 0 0;
 }
 
 .text__body {
@@ -119,6 +145,7 @@ body {
   justify-content: center;
   align-items: center;
 
+  height: 100%;
   padding: 0 1%;
 }
 
@@ -126,19 +153,35 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 1%;
+  padding: 1.5%;
   font-weight: bold;
   font-size: 3rem;
+  color: white;
 }
 
 .text__information {
   max-width: 900px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+.text__information::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: #00000076;
 }
 
 .text__title {
   padding: 0 0 2% 0;
   font-weight: bold;
   font-size: 3rem;
+  width: 100%;
 }
 
 .text__subtitle {
