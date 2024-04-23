@@ -118,7 +118,7 @@ body {
   list-style: none;
 
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
 
   font-weight: bold;
@@ -150,9 +150,6 @@ body {
 }
 
 .text__title-general {
-  position: absolute;
-  top: 0;
-  left: 0;
   padding: 1.5%;
   font-weight: bold;
   font-size: 3rem;
