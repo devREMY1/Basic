@@ -47,7 +47,8 @@ body {
 	flex-grow: 1;
 }
 .block:nth-child(3) {
-	flex-grow: 3;
+	flex-shrink: 0;
+	flex-basis: 350px;
 }
 
 @media (max-width: 600px) {
