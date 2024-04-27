@@ -18,13 +18,7 @@ body {
 	flex-direction: column;
 }
 
-.block__container:nth-child(1) {
-	display: flex;
-	justify-content: space-between;
-	padding: 1% 0;
-}
-
-.block__container:nth-child(2) {
+.block__container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -48,11 +42,12 @@ body {
 	font-weight: bold;
 }
 
-.block:nth-child(1) {
+.block:nth-child(1),
+.block:nth-child(2) {
 	flex-grow: 1;
 }
-.block:nth-child(2) {
-	flex-basis: 200px;
+.block:nth-child(3) {
+	flex-grow: 3;
 }
 
 @media (max-width: 600px) {
