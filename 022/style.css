@@ -39,3 +39,12 @@ body {
 .block:nth-child(1) {
 	flex-grow: 1;
 }
+
+@media (max-width: 600px) {
+	.block__container {
+		flex-direction: column;
+	}
+	.block {
+		margin: 1% 0;
+	}
+}
