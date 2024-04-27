@@ -33,4 +33,9 @@ body {
   border-radius: 5px;
   width: 200px;
   height: 200px;
+  margin: 0 1%;
+}
+
+.block:nth-child(1) {
+  flex-grow: 1;
 }
