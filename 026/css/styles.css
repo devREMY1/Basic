@@ -37,3 +37,23 @@ body {
 .footer {
 	flex: 0;
 }
+
+/* Налаштування кольорів */
+.bg-custom {
+	background-color: #b4d9ffa4; /* Приклад заднього фону */
+}
+
+.text-custom {
+	color: #6c757d; /* Приклад кольору тексту */
+}
+
+.btn-custom {
+	background-color: #007bff; /* Приклад кольору кнопок */
+	border-color: #007bff;
+	color: #fff;
+}
+
+.btn-custom:hover {
+	background-color: #0056b3; /* Приклад кольору кнопок при наведенні */
+	border-color: #0056b3;
+}
