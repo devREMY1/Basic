@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+body {
+	font-family: Montserrat;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background: rgb(255, 255, 255);
+}
+
+.img-container {
+	margin-right: 5px;
+}
+
+.modal-subcsription {
+	margin-top: 10px;
+}
+
+.carousel-item img {
+	margin-top: 10px;
+	width: 100%;
+	max-height: 600px;
+	object-fit: contain;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.footer {
+	flex: 0;
+}
