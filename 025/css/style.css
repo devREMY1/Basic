@@ -21,7 +21,7 @@ body {
 .container p {
   color: #333;
 }
-.container .btn {
+.container .btn.primary-btn {
   background-color: #3498db;
   border: none;
   color: #fff;
@@ -34,9 +34,58 @@ body {
   cursor: pointer;
   border-radius: 5px;
 }
-.container .btn.primary-btn {
-  background-color: #3498db;
-}
 .container .btn.secondary-btn {
   background-color: #2ecc71;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.container .btn.warning-btn {
+  background-color: #e74c3c;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.container .btn.success-btn {
+  background-color: #2ecc71;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-gradient-1 {
+  background-color: #5faee3;
+}
+
+.btn-gradient-2 {
+  background-color: #8bc4ea;
+}
+
+.btn-gradient-3 {
+  background-color: #b6daf2;
+}
+
+.btn-conditional {
+  background-color: #3498db;
 }

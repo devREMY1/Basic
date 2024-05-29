@@ -1,11 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-// Змінні
-$primary-color: #3498db;
-$secondary-color: #2ecc71;
+
+$colors: (
+  primary: #3498db,
+  secondary: #2ecc71,
+  warning: #e74c3c,
+  success: #2ecc71
+);
 $font-stack: "Montserrat";
 $base-font-size: 16px;
 
-// Міксин для кнопок
 @mixin button-styles($bg-color) {
   background-color: $bg-color;
   border: none;
@@ -20,7 +23,6 @@ $base-font-size: 16px;
   border-radius: 5px;
 }
 
-// Основні стилі
 body {
   font-family: $font-stack;
   font-size: $base-font-size;
@@ -38,7 +40,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
   h1 {
-    color: $primary-color;
+    color: map-get($colors, primary);
   }
 
   p {
@@ -46,14 +48,32 @@ body {
   }
 
   .btn {
-    @include button-styles($primary-color);
-
-    &.primary-btn {
-      background-color: $primary-color;
-    }
-
-    &.secondary-btn {
-      background-color: $secondary-color;
+    @each $name, $color in $colors {
+      &.#{$name}-btn {
+        @include button-styles($color);
+      }
     }
   }
+}
+
+@for $i from 1 through 3 {
+  .btn-gradient-#{$i} {
+    background-color: lighten(map-get($colors, primary), $i * 10%);
+  }
+}
+
+@mixin conditional-button-styles($condition) {
+  @if $condition == primary {
+    background-color: map-get($colors, primary);
+  } @else if $condition == secondary {
+    background-color: map-get($colors, secondary);
+  } @else if $condition == warning {
+    background-color: map-get($colors, warning);
+  } @else if $condition == success {
+    background-color: map-get($colors, success);
+  }
+}
+
+.btn-conditional {
+  @include conditional-button-styles(primary);
 }
