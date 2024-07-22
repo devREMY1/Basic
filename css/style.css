@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #cecebe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.header__logo-lnk {
+  text-decoration: none;
+  color: black;
+}
+.header__table-lnk-conainer {
+  position: absolute;
+  right: 1%;
+}
+.header__table-lnk {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+.header__table-lnk:focus {
+  text-decoration: underline;
+}
+
+.main {
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main__form {
+  display: flex;
+  flex-direction: column;
+  margin: 5% 0;
+  font-size: 1.5rem;
+}
+.main__form input,
+.main textarea {
+  border-radius: 5px;
+  padding: 2%;
+  font: 1em sans-serif;
+}
+.footer {
+  flex: 0;
+  background-color: #cecebe;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1%;
+}
+.footer__title {
+  margin: 0;
+  padding: 0;
+}
+.footer__list {
+  margin: 0;
+  padding: 0;
+}ze: 11px;
+}
+
+hr {
+  border: 2px solid black;
+}
+
+.ingredients {
+  margin: 50px 0;
+}
+.ingredients__title {
+  font-size: 30px;
+}
+.ingredients__table tr {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.cooking-instruction__title {
+  font-size: 40px;
+  text-align: center;
+}
+.cooking-instruction__item-container {
+  display: flex;
+  margin: 50px 0;
+}
+.cooking-instruction__item-container p {
+  max-width: 500px;
+}
+.cooking-instruction__item img {
+  margin: 0 50px;
+  border-radius: 5px;
+}
+
+.tips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  border: 2px solid black;
+  margin: 50px 0 0 0;
+}
+.tips__title {
+  font-size: 20px;
+}
+.tips__text {
+  text-align: center;
+  font-size: 20px;
+}
+
+details > summary {
+  cursor: pointer;
+  text-decoration: none;
+  color: #9fa0a0;
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+summary {
+  font-weight: bold;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::before {
+  content: "ЧИТАТЬ ПОЛНОСТЬЮ";
+  transition: all 0.5s;
+}
+
+details[open] summary::before {
+  transition: all 0.5s;
+  content: "ЗАКРЫТЬ";
+  color: red;
+}
