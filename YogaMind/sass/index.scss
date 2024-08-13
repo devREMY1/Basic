@@ -81,8 +81,10 @@ body {
 
 .mainSectionWrapper {
   position: relative;
-  overflow: hidden;
   background-color: #e7ecef;
+  @media screen and (max-width: 475px) {
+    overflow-x: hidden;
+  }
 
   .mainSection {
     max-width: 1300px;
@@ -517,9 +519,7 @@ body {
   }
 
   &-marker {
-    // transform: translate(-50%);
-    // left: 50%;
-    bottom: -6px;
+    bottom: -10px;
     position: absolute;
     padding: 6px 0;
     width: 100%;
