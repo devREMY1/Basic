@@ -476,7 +476,7 @@ body {
 	padding: 50px 0 57px 110px;
 }
 
-@media (min-width: 320px) and (max-width: 1024px) {
+@media (min-width: 320px) and (max-width: 770px) {
 	.mainSectionWrapper .mainSection__blog-title {
 		padding: 50px 0 57px 30px;
 		justify-content: center;
