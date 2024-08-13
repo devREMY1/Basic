@@ -706,8 +706,8 @@ body {
             color: #555d65;
 
             max-width: 245px;
-            @media (min-width: 770px) and (max-width: 1190px) {
-              max-width: 330px;
+            @media (min-width: 770px) and (max-width: 850px) {
+              max-width: 265px;
             }
           }
           &-img {
