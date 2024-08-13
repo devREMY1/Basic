@@ -712,6 +712,7 @@ body {
 }
 @media (min-width: 320px) and (max-width: 770px) {
   .programSectionWrapper .programSection__sliderWrapper-container-card {
+    flex: 0 0 auto;
     width: calc(240px + (280 - 240) * (100vw - 320px) / (770 - 320));
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     scroll-snap-align: center; /* Центрирование карточки */

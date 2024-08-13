@@ -673,6 +673,7 @@ body {
             width: values(250px, 380px, 770px, 1000px);
           }
           @media (min-width: 320px) and (max-width: 770px) {
+            flex: 0 0 auto;
             width: values(240px, 280px, 320px, 770px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             scroll-snap-align: center; /* Центрирование карточки */
