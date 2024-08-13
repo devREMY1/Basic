@@ -475,6 +475,13 @@ body {
 	color: white;
 	padding: 50px 0 57px 110px;
 }
+
+@media (min-width: 320px) and (max-width: 1024px) {
+	.mainSectionWrapper .mainSection__blog-title {
+		padding: 50px 0 57px 30px;
+		justify-content: center;
+	}
+}
 .mainSectionWrapper .mainSection__blog-contentWrapper-Block {
 	display: flex;
 	max-width: 1080px;
