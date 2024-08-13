@@ -651,7 +651,6 @@ body {
         }
         @media (min-width: 320px) and (max-width: 770px) {
           gap: 16px;
-          display: flex;
           overflow-x: auto;
           scroll-snap-type: x mandatory; /* Скролл по карточке */
           -webkit-overflow-scrolling: touch; /* Для плавного скролла на мобильных устройствах */
