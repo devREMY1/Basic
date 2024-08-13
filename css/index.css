@@ -531,6 +531,8 @@ body {
   }
 }
 .mainSectionWrapper-marker {
+  bottom: -6px;
+  position: absolute;
   padding: 6px 0;
   width: 100%;
   display: flex;

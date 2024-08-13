@@ -517,6 +517,10 @@ body {
   }
 
   &-marker {
+    // transform: translate(-50%);
+    // left: 50%;
+    bottom: -6px;
+    position: absolute;
     padding: 6px 0;
     width: 100%;
     display: flex;
