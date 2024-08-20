@@ -29,3 +29,19 @@
 	max-width: 500px;
 	height: auto;
 }
+
+.svg-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.svg-container svg {
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+.svg-container svg:hover {
+	transform: scale(1.2);
+}
