@@ -1,0 +1,31 @@
+.retina-image {
+	background-image: url('./Group\ 33796.svg');
+	background-size: cover;
+	background-position: center;
+	max-width: 500px;
+	height: 600px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-resolution: 192dpi) {
+	.retina-image {
+		background-image: url('./retina.jpg');
+		background-size: cover;
+	}
+}
+
+.icon {
+	width: 100px;
+	height: auto;
+}
+
+.logo {
+	width: 200px;
+	height: auto;
+}
+
+.opt {
+	width: 100%;
+	max-width: 500px;
+	height: auto;
+}
