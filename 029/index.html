@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./index.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="container">
+				<svg
+					viewBox="0 0 50 50"
+					width="200"
+					height="300"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<rect width="30" height="30" x="10" y="20" fill="blue">
+						<animate
+							attributeName="rx"
+							values="0;20;0;10;4;10;0"
+							dur="5s"
+							repeatCount="indefinite"
+						></animate>
+					</rect>
+				</svg>
+				<svg
+					viewBox="0 0 50 50"
+					width="200"
+					height="300"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<rect width="5" height="5" x="10" y="20" fill="blue">
+						<animateTransform
+							attributeName="transform"
+							attributeType="XML"
+							type="rotate"
+							from="-100"
+							to="500"
+							dur="10s"
+							repeatCount="indefinite"
+						></animateTransform>
+					</rect>
+				</svg>
+				<svg
+					viewBox="0 0 300 300"
+					width="200"
+					height="300"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						id="motionPath"
+						d="M 10 80 Q95 10 360 1 T 180 0 C 40 0 10 2 80 360"
+						fill="none"
+						stroke="black"
+					></path>
+					<circle cx="0" cy="0" r="10" fill="red">
+						<animateMotion dur="3s" repeatCount="indefinite">
+							<mpath xlink:href="#motionPath" />
+						</animateMotion>
+					</circle>
+				</svg>
+				<svg
+					width="500"
+					height="600"
+					viewBox="0 0 203 300"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<g id="circles">
+						<circle
+							id="Third"
+							cx="101.5"
+							cy="304.5"
+							r="40"
+							fill="#7C89FF"
+							stroke="black"
+						></circle>
+						<circle
+							id="Second"
+							cx="101.5"
+							cy="203.5"
+							r="40"
+							fill="#F585FF"
+							stroke="black"
+						/>
+						<circle
+							id="first"
+							cx="101.5"
+							cy="101.5"
+							r="40"
+							fill="#A5FFFF"
+							stroke="black"
+						/>
+					</g>
+				</svg>
+			</div>
+		</div>
+	</body>
+</html>

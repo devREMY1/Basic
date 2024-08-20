@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="1200" height="600">
+  <rect x="0" y="0" width="100" height="100" fill="#b4b4fb" />
+  <circle cx="180" cy="50" r="50" fill="black" />
+  <polygon points="0,100 50,25 50,75 100,0" fill="yellow" />
+  <path d="m 10 20 L10 10 l10 10" fill="white" />
+  <text x="142" y="55" fill="white">
+    Hello world
+  </text>
+  <defs>
+    <circle id="myCircle" cx="45" cy="140" r="40" />
+    <linearGradient id="myGradient" gradientTransform="rotate(90)">
+      <stop offset="20%" stop-color="gold" />
+      <stop offset="90%" stop-color="red" />
+    </linearGradient>
+  </defs>
+
+  <linearGradient id="myGradient2.0" gradientTransform="rotate(90)">
+    <stop offset="20%" stop-color="red" />
+    <stop offset="90%" stop-color="gold" />
+  </linearGradient>
+
+
+  <use x="5" y="10" href="#myCircle" fill="url('#myGradient2.0')" />
+  <circle cx="50" cy="150" r="40" fill="none" stroke="url('#myGradient')" stroke-width="3">
+    <animate attributeName="r" values="10;40;20;10" dur="3s" repeatCount="indefinite" />
+
+  </circle>
+</svg>

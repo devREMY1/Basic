@@ -1,0 +1,87 @@
+body {
+	background-color: aquamarine;
+}
+.wrapper {
+}
+.container {
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.svg-container {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+.svg-container__img {
+}
+
+@keyframes spin {
+	from {
+		rotate: 0;
+	}
+	to {
+		rotate: 30deg;
+	}
+}
+
+@keyframes zoom {
+	0% {
+		scale: 1.2;
+	}
+	25% {
+		scale: 1.5;
+	}
+	50% {
+		scale: 0.9;
+	}
+	75% {
+		scale: 0.5;
+	}
+	100% {
+		scale: 1;
+	}
+	100% {
+		scale: 1.2;
+	}
+}
+#first,
+#Second,
+#Third {
+	transition: all 1s cubic-bezier(-165, 0.84, 0.44, 1);
+}
+
+#circles {
+	animation: zoom 2s ease-in-out infinite 2s;
+}
+
+#circles:hover {
+	animation: none;
+	#first {
+		transition: all 1s;
+		fill: #f228;
+		transform: translateX(-100px) translateY(-50px);
+	}
+	#Second {
+		transition: all 1s;
+		fill: #f228;
+		transform: translateX(-100px) translateY(50px);
+	}
+	#Third {
+		transition: all 1s;
+		fill: #f228;
+		transform: translateX(-100px) translateY(50px);
+	}
+}
+
+#first {
+	animation: zoom 2s ease-in-out infinite;
+}
+#Second {
+	animation: zoom 1.5s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+}
+#Third {
+	animation: zoom 2s ease-in-out infinite;
+}
