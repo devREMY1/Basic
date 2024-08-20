@@ -1,0 +1,16 @@
+body {
+	background-color: aquamarine;
+}
+.wrapper {
+}
+.container {
+	width: 100%;
+	margin: 0 auto;
+}
+.svg-container {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+.svg-container__img {
+}

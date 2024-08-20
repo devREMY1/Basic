@@ -1104,16 +1104,40 @@ body {
   line-height: 150%;
   color: #555d65;
 }
+@media screen and (min-width: 1023px) {
+  .trainersSectionWrapper .trainersSection__textContainer-secondBlock-discription {
+    max-width: 630px;
+  }
+}
 @media (min-width: 1023px) and (max-width: 1440px) {
   .trainersSectionWrapper .trainersSection__textContainer-secondBlock-discription {
     font-size: calc(16px + (24 - 16) * (100vw - 1023px) / (1440 - 1023));
     line-height: calc(26px + (40 - 26) * (100vw - 1023px) / (1440 - 1023));
+    max-width: 630px;
   }
 }
-@media (min-width: 320px) and (max-width: 1023px) {
+@media (min-width: 1160px) and (max-width: 1280px) {
+  .trainersSectionWrapper .trainersSection__textContainer-secondBlock-discription {
+    max-width: calc(500px + (570 - 500) * (100vw - 1023px) / (1280 - 1023));
+  }
+}
+@media (min-width: 1022px) and (max-width: 1160px) {
+  .trainersSectionWrapper .trainersSection__textContainer-secondBlock-discription {
+    max-width: calc(370px + (500 - 370) * (100vw - 1023px) / (1280 - 1023));
+  }
+}
+@media (min-width: 770px) and (max-width: 1023px) {
   .trainersSectionWrapper .trainersSection__textContainer-secondBlock-discription {
     font-size: 16px;
     line-height: 26px;
+    max-width: 370px;
+  }
+}
+@media (min-width: 320px) and (max-width: 770px) {
+  .trainersSectionWrapper .trainersSection__textContainer-secondBlock-discription {
+    font-size: 16px;
+    line-height: 26px;
+    max-width: 370px;
   }
 }
 .trainersSectionWrapper .trainersSection__textContainer-secondBlock-secondTitle {
