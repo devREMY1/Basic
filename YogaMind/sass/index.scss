@@ -815,7 +815,6 @@ body {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 100vh;
       }
       &-firstTitle {
         @media (min-width: 320px) and (max-width: 770px) {
@@ -888,38 +887,34 @@ body {
         }
       }
       &-mobImgContainer {
+        max-width: 400px;
+        position: relative;
+        align-self: center;
+        width: 100%;
+        height: 400px;
         @media (min-width: 770px) and (max-width: 2561px) {
           display: none;
         }
         @media (min-width: 320px) and (max-width: 770px) {
-          display: flex;
-          position: relative;
-          width: 100%;
-          height: 100%;
+          height: values(150px, 400px, 320px, 770px);
         }
-
         &-img {
           position: absolute;
           width: 360px;
-          right: 50%;
+          right: 40%;
+          top: 0;
           transform: translate(65%);
-          bottom: -73px;
-          @media (min-width: 320px) and (max-width: 770px) {
-            transform: translate(61%);
-            bottom: values(-72px, -73px, 320px, 770px);
-            width: values(221px, 360px, 320px, 770px);
+
+          @media (min-width: 515px) and (max-width: 770px) {
+            width: values(299px, 425px, 515px, 770px);
+            right: values(200px, 169px, 515px, 770px);
+            top: values(-6px, 0px, 515px, 770px);
           }
-          @media (min-width: 514px) and (max-width: 770px) {
-            width: values(340px, 360px, 514px, 770px);
-          }
-          @media (min-width: 410px) and (max-width: 514px) {
-            width: values(305px, 340px, 410px, 514px);
-          }
-          @media (min-width: 390px) and (max-width: 410px) {
-            width: values(260px, 305px, 390px, 410px);
-          }
-          @media (min-width: 320px) and (max-width: 389px) {
-            width: values(239px, 241px, 320px, 389px);
+
+          @media (min-width: 320px) and (max-width: 515px) {
+            width: values(197px, 450px, 320px, 770px);
+            right: values(129px, 259px, 320px, 770px);
+            top: values(-6px, 0px, 515px, 770px);
           }
         }
       }
