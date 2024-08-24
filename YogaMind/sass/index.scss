@@ -1074,3 +1074,206 @@ body {
     }
   }
 }
+
+.subscriptionSectionWrapper {
+  position: relative;
+
+  &-marker {
+    bottom: -12px;
+    position: absolute;
+    padding: 6px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    @media screen and (max-width: 520px) {
+      display: none;
+    }
+    &-left {
+      width: 12px;
+      border: 5px solid #1f6c94;
+      background: #1f6c94;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    &-center {
+      width: 12px;
+      height: 12px;
+      background: #1f6c94;
+      transform: rotate(135deg);
+    }
+    &-right {
+      width: 12px;
+      border: 5px solid #1f6c94;
+      background: #1f6c94;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+  }
+
+  .subscriptionSection {
+    font-family: "Kyiv Type Sans", sans-serif;
+
+    margin: 0 auto;
+    padding: 106px 0 200px 0;
+    max-width: 1300px;
+
+    // Медиа страницы
+    @media (min-width: 1023px) and (max-width: 1440px) {
+      max-width: values(884px, 1300px, 1023px, 1440px);
+    }
+    @media (min-width: 320px) and (max-width: 1023px) {
+      max-width: values(280px, 884px, 320px, 1023px);
+    }
+
+    &__headerTitleContainer {
+      margin-bottom: 60px;
+      &-title {
+        margin: 0;
+        padding: 0;
+
+        font-size: 40px;
+        font-weight: 500;
+
+        color: #1f6c94;
+      }
+      &-subtitle {
+        margin: 0;
+        padding: 0;
+
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 150%;
+
+        color: #555d65;
+      }
+    }
+    &__cardWrapper {
+      display: flex;
+      justify-content: space-between;
+
+      @media (min-width: 320px) and (max-width: 980px) {
+        flex-direction: column;
+      }
+
+      &-wrap {
+        width: 360px;
+        height: 318px;
+        @media (min-width: 1024px) and (max-width: 1440px) {
+          width: values(275px, 360px, 1024px, 1440px);
+          height: values(245px, 318px, 1024px, 1440px);
+        }
+
+        @media (min-width: 980px) and (max-width: 1024px) {
+          width: values(275px, 275px, 980px, 1024px);
+          height: values(245px, 245px, 980px, 1024px);
+        }
+
+        &-card {
+          box-sizing: border-box;
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+
+          background-color: #e7ecef;
+
+          padding: 26px;
+          border-radius: 10px;
+
+          width: 100%;
+          height: 100%;
+
+          &-left {
+            @media (min-width: 320px) and (max-width: 980px) {
+              align-self: flex-start;
+            }
+          }
+
+          &-center {
+            @media (min-width: 980px) and (max-width: 1024px) {
+              margin-top: 83px;
+            }
+            @media (min-width: 320px) and (max-width: 980px) {
+              justify-content: center; 
+            }
+          }
+
+          &-price {
+            font-size: 58px;
+            font-weight: 500;
+            line-height: 63.8px;
+
+            color: #1f6c94;
+
+            @media (min-width: 1024px) and (max-width: 1440px) {
+              font-size: values(48px, 58px, 1024px, 1440px);
+            }
+            @media (min-width: 980px) and (max-width: 1024px) {
+              font-size: values(48px, 48px, 980px, 1024px);
+            }
+          }
+          &-discription {
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 19.5px;
+
+            color: #1f6c94;
+
+            max-width: 300px;
+
+            @media (min-width: 1024px) and (max-width: 1440px) {
+              font-size: values(15px, 17px, 1024px, 1440px);
+            }
+            @media (min-width: 980px) and (max-width: 1024px) {
+              font-size: values(15px, 17px, 980px, 1024px);
+            }
+          }
+
+          &-btn {
+            align-self: flex-end;
+
+            font-size: 14px;
+            font-weight: 400;
+            line-height: auto;
+            letter-spacing: 1.12px;
+
+            color: #e7ecef;
+            background-color: #1f6c94;
+
+            padding: 14px 28px;
+            border-radius: 20px;
+            border: none;
+
+            cursor: pointer;
+
+            @media (min-width: 1024px) and (max-width: 1440px) {
+              padding: values(9px, 14px, 1024px, 1440px) 28px;
+            }
+
+            &:active {
+              margin: 0;
+
+              color: #1f6c94;
+              background-color: #e7ecef;
+
+              outline: 1px solid #1f6c94;
+            }
+          }
+          &-marker {
+            position: absolute;
+            top: calc(100% + 16px);
+            right: 50%;
+
+            background-color: #1f6c94;
+
+            width: 11px;
+            height: 11px;
+            transform: translate(-50%);
+            transform: rotate(135deg);
+          }
+        }
+      }
+    }
+  }
+}
