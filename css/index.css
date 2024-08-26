@@ -1162,6 +1162,7 @@ body {
 
 .subscriptionSectionWrapper {
   position: relative;
+  overflow-x: hidden;
 }
 .subscriptionSectionWrapper-marker {
   bottom: -12px;
@@ -1223,26 +1224,61 @@ body {
   font-weight: 500;
   color: #1f6c94;
 }
+@media (min-width: 320px) and (max-width: 980px) {
+  .subscriptionSectionWrapper .subscriptionSection__headerTitleContainer-title {
+    font-size: calc(24px + (40 - 24) * (100vw - 320px) / (980 - 320));
+  }
+}
 .subscriptionSectionWrapper .subscriptionSection__headerTitleContainer-subtitle {
   margin: 0;
-  padding: 0;
+  padding: 24px 0 0 0;
   font-size: 24px;
   font-weight: 400;
   line-height: 150%;
   color: #555d65;
 }
+@media (min-width: 320px) and (max-width: 980px) {
+  .subscriptionSectionWrapper .subscriptionSection__headerTitleContainer-subtitle {
+    font-size: calc(16px + (24 - 16) * (100vw - 320px) / (980 - 320));
+    padding: calc(16px + (24 - 16) * (100vw - 320px) / (980 - 320)) 0 0 0;
+  }
+}
 .subscriptionSectionWrapper .subscriptionSection__cardWrapper {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 2;
 }
 @media (min-width: 320px) and (max-width: 980px) {
   .subscriptionSectionWrapper .subscriptionSection__cardWrapper {
     flex-direction: column;
+    gap: 10px;
+  }
+}
+@media (min-width: 320px) and (max-width: 980px) {
+  .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap:nth-child(2) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 320px) and (max-width: 980px) {
+  .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap:nth-child(3) {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap {
   width: 360px;
   height: 318px;
+}
+@media (min-width: 320px) and (max-width: 980px) {
+  .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap {
+    width: 100%;
+    height: unset;
+    display: flex;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1440px) {
   .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap {
@@ -1250,7 +1286,7 @@ body {
     height: calc(245px + (318 - 245) * (100vw - 1024px) / (1440 - 1024));
   }
 }
-@media (min-width: 980px) and (max-width: 1024px) {
+@media (min-width: 981px) and (max-width: 1024px) {
   .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap {
     width: calc(275px + (275 - 275) * (100vw - 980px) / (1024 - 980));
     height: calc(245px + (245 - 245) * (100vw - 980px) / (1024 - 980));
@@ -1262,11 +1298,72 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  color: #1f6c94;
   background-color: #e7ecef;
   padding: 26px;
   border-radius: 10px;
   width: 100%;
   height: 100%;
+  transition: all ease-in-out 0.5s;
+}
+.subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover {
+  color: #e7ecef !important;
+  background-color: #1f6c94;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
+.subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover .subscriptionSection__cardWrapper-wrap-card-left {
+  z-index: -2;
+}
+.subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover .subscriptionSection__cardWrapper-wrap-card-btn {
+  background-color: #e7ecef;
+  color: #1f6c94;
+}
+.subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover .subscriptionSection__cardWrapper-wrap-card-btn:active {
+  background-color: #1f6c94;
+  color: #e7ecef;
+  outline: 1px solid #e7ecef;
+}
+.subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover .subscriptionSection__cardWrapper-wrap-card-marker {
+  display: none;
+}
+.subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover .subscriptionSection__cardWrapper-wrap-card-hover {
+  position: absolute;
+  display: flex;
+  z-index: -1;
+  background: #e7ecef;
+  left: 50%;
+  top: 50%;
+  width: 320px;
+  height: 320px;
+  transform: rotate(45deg) translateX(-71%);
+  opacity: 0;
+}
+@media (min-width: 320px) and (max-width: 1440px) {
+  .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover .subscriptionSection__cardWrapper-wrap-card-hover {
+    width: calc(170px + (320 - 170) * (100vw - 320px) / (1440 - 320));
+    height: calc(170px + (320 - 170) * (100vw - 320px) / (1440 - 320));
+  }
+}
+.subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover:hover .subscriptionSection__cardWrapper-wrap-card-hover {
+  animation: hoverSlow 0.5s ease-in-out 0.4s forwards;
+}
+@keyframes hoverSlow {
+  0% {
+    transform: rotate(45deg) translateX(0%);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(45deg) translateX(-71%);
+    opacity: 1;
+  }
+}
+@media (min-width: 320px) and (max-width: 980px) {
+  .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card {
+    width: calc(210px + (275 - 210) * (100vw - 320px) / (980 - 320));
+    height: calc(188px + (245 - 188) * (100vw - 320px) / (980 - 320));
+    gap: 3px;
+  }
 }
 @media (min-width: 320px) and (max-width: 980px) {
   .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card-left {
@@ -1278,16 +1375,10 @@ body {
     margin-top: 83px;
   }
 }
-@media (min-width: 320px) and (max-width: 980px) {
-  .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card-center {
-    justify-content: center;
-  }
-}
 .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card-price {
   font-size: 58px;
   font-weight: 500;
   line-height: 63.8px;
-  color: #1f6c94;
 }
 @media (min-width: 1024px) and (max-width: 1440px) {
   .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card-price {
@@ -1299,11 +1390,16 @@ body {
     font-size: calc(48px + (48 - 48) * (100vw - 980px) / (1024 - 980));
   }
 }
+@media (min-width: 320px) and (max-width: 980px) {
+  .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card-price {
+    font-size: calc(36px + (48 - 36) * (100vw - 320px) / (980 - 320));
+    line-height: auto;
+  }
+}
 .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card-discription {
   font-size: 17px;
   font-weight: 400;
   line-height: 19.5px;
-  color: #1f6c94;
   max-width: 300px;
 }
 @media (min-width: 1024px) and (max-width: 1440px) {
@@ -1314,6 +1410,12 @@ body {
 @media (min-width: 980px) and (max-width: 1024px) {
   .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card-discription {
     font-size: calc(15px + (17 - 15) * (100vw - 980px) / (1024 - 980));
+  }
+}
+@media (min-width: 320px) and (max-width: 980px) {
+  .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card-discription {
+    font-size: calc(12px + (15 - 12) * (100vw - 320px) / (980 - 320));
+    line-height: unset;
   }
 }
 .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card-btn {
@@ -1334,6 +1436,12 @@ body {
     padding: calc(9px + (14 - 9) * (100vw - 1024px) / (1440 - 1024)) 28px;
   }
 }
+@media (min-width: 320px) and (max-width: 980px) {
+  .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card-btn {
+    font-size: calc(11px + (14 - 11) * (100vw - 320px) / (980 - 320));
+    padding: calc(6px + (9 - 6) * (100vw - 320px) / (980 - 320)) 22px;
+  }
+}
 .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card-btn:active {
   margin: 0;
   color: #1f6c94;
@@ -1349,4 +1457,9 @@ body {
   height: 11px;
   transform: translate(-50%);
   transform: rotate(135deg);
+}
+@media (min-width: 320px) and (max-width: 980px) {
+  .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card-marker {
+    display: none;
+  }
 }

@@ -1077,6 +1077,7 @@ body {
 
 .subscriptionSectionWrapper {
   position: relative;
+  overflow-x: hidden;
 
   &-marker {
     bottom: -12px;
@@ -1136,35 +1137,70 @@ body {
         font-weight: 500;
 
         color: #1f6c94;
+
+        @media (min-width: 320px) and (max-width: 980px) {
+          font-size: values(24px, 40px, 320px, 980px);
+        }
       }
       &-subtitle {
         margin: 0;
-        padding: 0;
+        padding: 24px 0 0 0;
 
         font-size: 24px;
         font-weight: 400;
         line-height: 150%;
 
         color: #555d65;
+
+        @media (min-width: 320px) and (max-width: 980px) {
+          font-size: values(16px, 24px, 320px, 980px);
+          padding: values(16px, 24px, 320px, 980px) 0 0 0;
+        }
       }
     }
     &__cardWrapper {
       display: flex;
       justify-content: space-between;
+      position: relative;
+      z-index: 2;
 
       @media (min-width: 320px) and (max-width: 980px) {
         flex-direction: column;
+        gap: 10px;
+      }
+
+      &-wrap:nth-child(2) {
+        @media (min-width: 320px) and (max-width: 980px) {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      &-wrap:nth-child(3) {
+        @media (min-width: 320px) and (max-width: 980px) {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+        }
       }
 
       &-wrap {
         width: 360px;
         height: 318px;
+
+        @media (min-width: 320px) and (max-width: 980px) {
+          width: 100%;
+          height: unset;
+          display: flex;
+        }
+
         @media (min-width: 1024px) and (max-width: 1440px) {
           width: values(275px, 360px, 1024px, 1440px);
           height: values(245px, 318px, 1024px, 1440px);
         }
 
-        @media (min-width: 980px) and (max-width: 1024px) {
+        @media (min-width: 981px) and (max-width: 1024px) {
           width: values(275px, 275px, 980px, 1024px);
           height: values(245px, 245px, 980px, 1024px);
         }
@@ -1176,6 +1212,7 @@ body {
           justify-content: space-between;
           flex-direction: column;
 
+          color: #1f6c94;
           background-color: #e7ecef;
 
           padding: 26px;
@@ -1183,6 +1220,70 @@ body {
 
           width: 100%;
           height: 100%;
+          transition: all ease-in-out 0.5s;
+
+          &:hover {
+            color: #e7ecef !important;
+            background-color: #1f6c94;
+            cursor: pointer;
+            transition: all ease-in-out 0.5s;
+
+            .subscriptionSection__cardWrapper-wrap-card-left {
+              z-index: -2;
+            }
+
+            .subscriptionSection__cardWrapper-wrap-card-btn {
+              background-color: #e7ecef;
+              color: #1f6c94;
+              &:active {
+                background-color: #1f6c94;
+                color: #e7ecef;
+                outline: 1px solid #e7ecef;
+              }
+            }
+            .subscriptionSection__cardWrapper-wrap-card-marker {
+              display: none;
+            }
+
+            .subscriptionSection__cardWrapper-wrap-card-hover {
+              position: absolute;
+              display: flex;
+              z-index: -1;
+
+              background: #e7ecef;
+
+              left: 50%;
+              top: 50%;
+              width: 320px;
+              height: 320px;
+              transform: rotate(45deg) translateX(-71%);
+              opacity: 0;
+
+              @media (min-width: 320px) and (max-width: 1440px) {
+                width: values(170px, 320px, 320px, 1440px);
+                height: values(170px, 320px, 320px, 1440px);
+              }
+            }
+            &:hover .subscriptionSection__cardWrapper-wrap-card-hover {
+              animation: hoverSlow 0.5s ease-in-out 0.4s forwards;
+            }
+          }
+          @keyframes hoverSlow {
+            0% {
+              transform: rotate(45deg) translateX(0%);
+              opacity: 0;
+            }
+            100% {
+              transform: rotate(45deg) translateX(-71%);
+              opacity: 1;
+            }
+          }
+
+          @media (min-width: 320px) and (max-width: 980px) {
+            width: values(210px, 275px, 320px, 980px);
+            height: values(188px, 245px, 320px, 980px);
+            gap: 3px;
+          }
 
           &-left {
             @media (min-width: 320px) and (max-width: 980px) {
@@ -1194,9 +1295,6 @@ body {
             @media (min-width: 980px) and (max-width: 1024px) {
               margin-top: 83px;
             }
-            @media (min-width: 320px) and (max-width: 980px) {
-              justify-content: center; 
-            }
           }
 
           &-price {
@@ -1204,21 +1302,21 @@ body {
             font-weight: 500;
             line-height: 63.8px;
 
-            color: #1f6c94;
-
             @media (min-width: 1024px) and (max-width: 1440px) {
               font-size: values(48px, 58px, 1024px, 1440px);
             }
             @media (min-width: 980px) and (max-width: 1024px) {
               font-size: values(48px, 48px, 980px, 1024px);
             }
+            @media (min-width: 320px) and (max-width: 980px) {
+              font-size: values(36px, 48px, 320px, 980px);
+              line-height: auto;
+            }
           }
           &-discription {
             font-size: 17px;
             font-weight: 400;
             line-height: 19.5px;
-
-            color: #1f6c94;
 
             max-width: 300px;
 
@@ -1227,6 +1325,10 @@ body {
             }
             @media (min-width: 980px) and (max-width: 1024px) {
               font-size: values(15px, 17px, 980px, 1024px);
+            }
+            @media (min-width: 320px) and (max-width: 980px) {
+              font-size: values(12px, 15px, 320px, 980px);
+              line-height: unset;
             }
           }
 
@@ -1251,6 +1353,11 @@ body {
               padding: values(9px, 14px, 1024px, 1440px) 28px;
             }
 
+            @media (min-width: 320px) and (max-width: 980px) {
+              font-size: values(11px, 14px, 320px, 980px);
+              padding: values(6px, 9px, 320px, 980px) 22px;
+            }
+
             &:active {
               margin: 0;
 
@@ -1271,6 +1378,10 @@ body {
             height: 11px;
             transform: translate(-50%);
             transform: rotate(135deg);
+
+            @media (min-width: 320px) and (max-width: 980px) {
+              display: none;
+            }
           }
         }
       }
