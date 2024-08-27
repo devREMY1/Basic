@@ -1162,6 +1162,7 @@ body {
 
 .subscriptionSectionWrapper {
   position: relative;
+  overflow-x: hidden;
   padding: 24px 0;
 }
 .subscriptionSectionWrapper-marker {
