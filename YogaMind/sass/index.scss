@@ -1077,7 +1077,7 @@ body {
 
 .subscriptionSectionWrapper {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 
   &-marker {
     bottom: -12px;
@@ -1167,33 +1167,35 @@ body {
       @media (min-width: 320px) and (max-width: 980px) {
         flex-direction: column;
         gap: 10px;
+
+        width: 95vw;
+        left: 50%;
+        transform: translate(-50%);
       }
 
-      &-wrap:nth-child(2) {
-        @media (min-width: 320px) and (max-width: 980px) {
-          width: 100%;
-          display: flex;
-          justify-content: center;
+      &-wrap:nth-child(1) {
+        z-index: 1;
+        align-self: flex-start;
+        &:hover {
+          z-index: 20;
         }
+      }
+      &-wrap:nth-child(2) {
+        align-self: center;
       }
 
       &-wrap:nth-child(3) {
-        @media (min-width: 320px) and (max-width: 980px) {
-          width: 100%;
-          display: flex;
-          justify-content: flex-end;
+        z-index: 1;
+        align-self: flex-end;
+        &:hover {
+          z-index: 10;
         }
       }
 
       &-wrap {
         width: 360px;
         height: 318px;
-
-        @media (min-width: 320px) and (max-width: 980px) {
-          width: 100%;
-          height: unset;
-          display: flex;
-        }
+        z-index: 10;
 
         @media (min-width: 1024px) and (max-width: 1440px) {
           width: values(275px, 360px, 1024px, 1440px);
@@ -1205,9 +1207,19 @@ body {
           height: values(245px, 245px, 980px, 1024px);
         }
 
+        @media (min-width: 320px) and (max-width: 981px) {
+          width: values(210px, 275px, 320px, 981px);
+          height: values(188px, 245px, 320px, 981px);
+        }
+        .subscriptionSection__cardWrapper-wrap-card-center:hover {
+          .subscriptionSection__cardWrapper-wrap {
+            z-index: 1;
+          }
+        }
+
         &-card {
-          box-sizing: border-box;
           position: relative;
+          box-sizing: border-box;
           display: flex;
           justify-content: space-between;
           flex-direction: column;
@@ -1222,67 +1234,70 @@ body {
           height: 100%;
           transition: all ease-in-out 0.5s;
 
-          &:hover {
-            color: #e7ecef !important;
-            background-color: #1f6c94;
-            cursor: pointer;
-            transition: all ease-in-out 0.5s;
-
-            .subscriptionSection__cardWrapper-wrap-card-left {
-              z-index: -2;
-            }
-
-            .subscriptionSection__cardWrapper-wrap-card-btn {
-              background-color: #e7ecef;
-              color: #1f6c94;
-              &:active {
-                background-color: #1f6c94;
-                color: #e7ecef;
-                outline: 1px solid #e7ecef;
-              }
-            }
-            .subscriptionSection__cardWrapper-wrap-card-marker {
-              display: none;
-            }
-
-            .subscriptionSection__cardWrapper-wrap-card-hover {
-              position: absolute;
-              display: flex;
-              z-index: -1;
-
-              background: #e7ecef;
-
-              left: 50%;
-              top: 50%;
-              width: 320px;
-              height: 320px;
-              transform: rotate(45deg) translateX(-71%);
-              opacity: 0;
-
-              @media (min-width: 320px) and (max-width: 1440px) {
-                width: values(170px, 320px, 320px, 1440px);
-                height: values(170px, 320px, 320px, 1440px);
-              }
-            }
-            &:hover .subscriptionSection__cardWrapper-wrap-card-hover {
-              animation: hoverSlow 0.5s ease-in-out 0.4s forwards;
-            }
-          }
-          @keyframes hoverSlow {
-            0% {
-              transform: rotate(45deg) translateX(0%);
-              opacity: 0;
-            }
-            100% {
-              transform: rotate(45deg) translateX(-71%);
-              opacity: 1;
-            }
-          }
-
           @media (min-width: 320px) and (max-width: 980px) {
             width: values(210px, 275px, 320px, 980px);
             height: values(188px, 245px, 320px, 980px);
             gap: 3px;
+
+            .subscriptionSection__cardWrapper-wrap-card-hover {
+              display: none;
+            }
+
+            &:hover {
+              cursor: pointer;
+              color: #e7ecef !important;
+              background-color: #1f6c94;
+              transition: all ease-in-out 0.5s;
+
+              .subscriptionSection__cardWrapper-wrap-card-btn {
+                background-color: #e7ecef;
+                color: #1f6c94;
+                &:active {
+                  background-color: #1f6c94;
+                  color: #e7ecef;
+                  outline: 1px solid #e7ecef;
+                }
+              }
+              .subscriptionSection__cardWrapper-wrap-marker {
+                display: none;
+              }
+
+              .subscriptionSection__cardWrapper-wrap-card-hover {
+                position: absolute;
+                display: flex;
+                z-index: -10;
+
+                background: #e7ecef;
+                box-shadow: 0px 0px 7px black;
+
+                left: 50%;
+                top: 50%;
+                width: 320px;
+                height: 320px;
+                transform: translate(-50%, -50%) rotate(45deg);
+                opacity: 0;
+
+                @media (min-width: 320px) and (max-width: 1440px) {
+                  width: values(170px, 320px, 320px, 1440px);
+                  height: values(170px, 320px, 320px, 1440px);
+                }
+              }
+
+              &:hover .subscriptionSection__cardWrapper-wrap-card-hover {
+                animation: hoverSlow 0.5s ease-in-out 0.4s forwards;
+              }
+            }
+
+            @keyframes hoverSlow {
+              0% {
+                transform: translate(0%) rotate(45deg);
+                opacity: 0;
+              }
+              100% {
+                transform: translate(-50%, -50%) rotate(45deg);
+                opacity: 1;
+              }
+            }
           }
 
           &-left {
