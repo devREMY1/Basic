@@ -1077,7 +1077,7 @@ body {
 
 .subscriptionSectionWrapper {
   position: relative;
-  overflow: hidden;
+  padding: 24px 0;
 
   &-marker {
     bottom: -12px;
@@ -1116,7 +1116,7 @@ body {
     font-family: "Kyiv Type Sans", sans-serif;
 
     margin: 0 auto;
-    padding: 106px 0 200px 0;
+
     max-width: 1300px;
 
     // Медиа страницы
