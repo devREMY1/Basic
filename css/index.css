@@ -1163,7 +1163,7 @@ body {
 .subscriptionSectionWrapper {
   position: relative;
   overflow-x: hidden;
-  padding: 36px 0;
+  padding: 106px 0 186px 0;
 }
 .subscriptionSectionWrapper-marker {
   bottom: 0;
@@ -1298,9 +1298,6 @@ body {
     height: calc(188px + (245 - 188) * (100vw - 320px) / (981 - 320));
   }
 }
-.subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap .subscriptionSection__cardWrapper-wrap-card-center:hover .subscriptionSection__cardWrapper-wrap {
-  z-index: 1;
-}
 .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card {
   position: relative;
   box-sizing: border-box;
@@ -1321,60 +1318,61 @@ body {
     height: calc(188px + (245 - 188) * (100vw - 320px) / (980 - 320));
     gap: 3px;
   }
-  .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card .subscriptionSection__cardWrapper-wrap-card-hover {
-    display: none;
-  }
-  .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover {
-    cursor: pointer;
-    color: #e7ecef !important;
-    background-color: #1f6c94;
-    transition: all ease-in-out 0.5s;
-  }
-  .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover .subscriptionSection__cardWrapper-wrap-card-btn {
-    background-color: #e7ecef;
-    color: #1f6c94;
-  }
-  .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover .subscriptionSection__cardWrapper-wrap-card-btn:active {
-    background-color: #1f6c94;
-    color: #e7ecef;
-    outline: 1px solid #e7ecef;
-  }
-  .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover .subscriptionSection__cardWrapper-wrap-marker {
-    display: none;
-  }
-  .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover .subscriptionSection__cardWrapper-wrap-card-hover {
-    position: absolute;
-    display: flex;
-    z-index: -10;
-    background: #e7ecef;
-    box-shadow: 0px 0px 7px black;
-    left: 50%;
-    top: 50%;
-    width: 320px;
-    height: 320px;
-    transform: translate(-50%, -50%) rotate(45deg);
-    opacity: 0;
-  }
 }
-@media (min-width: 320px) and (max-width: 980px) and (min-width: 320px) and (max-width: 1440px) {
+.subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card .subscriptionSection__cardWrapper-wrap-card-hover {
+  display: none;
+}
+.subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover {
+  cursor: pointer;
+  color: #e7ecef !important;
+  background-color: #1f6c94;
+  transition: all ease-in-out 0.5s;
+}
+.subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover .subscriptionSection__cardWrapper-wrap-card-btn {
+  background-color: #e7ecef;
+  color: #1f6c94;
+}
+.subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover .subscriptionSection__cardWrapper-wrap-card-btn:active {
+  background-color: #1f6c94;
+  color: #e7ecef;
+  outline: 1px solid #e7ecef;
+}
+.subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover .subscriptionSection__cardWrapper-wrap-marker {
+  display: none;
+}
+.subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover .subscriptionSection__cardWrapper-wrap-card-marker {
+  display: none;
+}
+.subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover .subscriptionSection__cardWrapper-wrap-card-hover {
+  position: absolute;
+  display: flex;
+  z-index: -10;
+  background: #e7ecef;
+  box-shadow: 0px 0px 7px black;
+  left: 50%;
+  top: 50%;
+  width: 320px;
+  height: 320px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 0;
+}
+@media (min-width: 320px) and (max-width: 1440px) {
   .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover .subscriptionSection__cardWrapper-wrap-card-hover {
     width: calc(170px + (320 - 170) * (100vw - 320px) / (1440 - 320));
     height: calc(170px + (320 - 170) * (100vw - 320px) / (1440 - 320));
   }
 }
-@media (min-width: 320px) and (max-width: 980px) {
-  .subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover:hover .subscriptionSection__cardWrapper-wrap-card-hover {
-    animation: hoverSlow 0.5s ease-in-out 0.4s forwards;
+.subscriptionSectionWrapper .subscriptionSection__cardWrapper-wrap-card:hover:hover .subscriptionSection__cardWrapper-wrap-card-hover {
+  animation: hoverSlow 0.5s ease-in-out 0.3s forwards;
+}
+@keyframes hoverSlow {
+  0% {
+    transform: translate(0%) rotate(45deg);
+    opacity: 0;
   }
-  @keyframes hoverSlow {
-    0% {
-      transform: translate(0%) rotate(45deg);
-      opacity: 0;
-    }
-    100% {
-      transform: translate(-50%, -50%) rotate(45deg);
-      opacity: 1;
-    }
+  100% {
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: 1;
   }
 }
 @media (min-width: 320px) and (max-width: 980px) {

@@ -1078,7 +1078,7 @@ body {
 .subscriptionSectionWrapper {
   position: relative;
   overflow-x: hidden;
-  padding: 36px 0;
+  padding: 106px 0 186px 0;
 
   &-marker {
     bottom: 0;
@@ -1212,11 +1212,6 @@ body {
           width: values(210px, 275px, 320px, 981px);
           height: values(188px, 245px, 320px, 981px);
         }
-        .subscriptionSection__cardWrapper-wrap-card-center:hover {
-          .subscriptionSection__cardWrapper-wrap {
-            z-index: 1;
-          }
-        }
 
         &-card {
           position: relative;
@@ -1239,65 +1234,69 @@ body {
             width: values(210px, 275px, 320px, 980px);
             height: values(188px, 245px, 320px, 980px);
             gap: 3px;
+          }
 
-            .subscriptionSection__cardWrapper-wrap-card-hover {
+          .subscriptionSection__cardWrapper-wrap-card-hover {
+            display: none;
+          }
+
+          &:hover {
+            cursor: pointer;
+            color: #e7ecef !important;
+            background-color: #1f6c94;
+            transition: all ease-in-out 0.5s;
+
+            .subscriptionSection__cardWrapper-wrap-card-btn {
+              background-color: #e7ecef;
+              color: #1f6c94;
+              &:active {
+                background-color: #1f6c94;
+                color: #e7ecef;
+                outline: 1px solid #e7ecef;
+              }
+            }
+            .subscriptionSection__cardWrapper-wrap-marker {
               display: none;
             }
 
-            &:hover {
-              cursor: pointer;
-              color: #e7ecef !important;
-              background-color: #1f6c94;
-              transition: all ease-in-out 0.5s;
+            .subscriptionSection__cardWrapper-wrap-card-marker {
+              display: none;
+            }
 
-              .subscriptionSection__cardWrapper-wrap-card-btn {
-                background-color: #e7ecef;
-                color: #1f6c94;
-                &:active {
-                  background-color: #1f6c94;
-                  color: #e7ecef;
-                  outline: 1px solid #e7ecef;
-                }
-              }
-              .subscriptionSection__cardWrapper-wrap-marker {
-                display: none;
-              }
+            .subscriptionSection__cardWrapper-wrap-card-hover {
+              position: absolute;
+              display: flex;
+              z-index: -10;
 
-              .subscriptionSection__cardWrapper-wrap-card-hover {
-                position: absolute;
-                display: flex;
-                z-index: -10;
+              background: #e7ecef;
+              box-shadow: 0px 0px 7px black;
 
-                background: #e7ecef;
-                box-shadow: 0px 0px 7px black;
+              left: 50%;
+              top: 50%;
+              width: 320px;
+              height: 320px;
+              transform: translate(-50%, -50%) rotate(45deg);
+              opacity: 0;
 
-                left: 50%;
-                top: 50%;
-                width: 320px;
-                height: 320px;
-                transform: translate(-50%, -50%) rotate(45deg);
-                opacity: 0;
-
-                @media (min-width: 320px) and (max-width: 1440px) {
-                  width: values(170px, 320px, 320px, 1440px);
-                  height: values(170px, 320px, 320px, 1440px);
-                }
-              }
-
-              &:hover .subscriptionSection__cardWrapper-wrap-card-hover {
-                animation: hoverSlow 0.5s ease-in-out 0.4s forwards;
+              @media (min-width: 320px) and (max-width: 1440px) {
+                width: values(170px, 320px, 320px, 1440px);
+                height: values(170px, 320px, 320px, 1440px);
               }
             }
 
-            @keyframes hoverSlow {
-              0% {
-                transform: translate(0%) rotate(45deg);
-                opacity: 0;
-              }
-              100% {
-                transform: translate(-50%, -50%) rotate(45deg);
-                opacity: 1;
-              }
+            &:hover .subscriptionSection__cardWrapper-wrap-card-hover {
+              animation: hoverSlow 0.5s ease-in-out 0.3s forwards;
+            }
+          }
+
+          @keyframes hoverSlow {
+            0% {
+              transform: translate(0%) rotate(45deg);
+              opacity: 0;
+            }
+            100% {
+              transform: translate(-50%, -50%) rotate(45deg);
+              opacity: 1;
             }
           }
 
