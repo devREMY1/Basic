@@ -1,0 +1,44 @@
+body {
+	overflow: hidden;
+}
+
+.pic__wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	height: 100vh;
+}
+
+.pic__wrap-container {
+	max-width: 800px;
+	max-height: 800px;
+}
+
+picture img {
+	display: block;
+
+	border-radius: 20px;
+
+	width: 100%;
+	height: 100%;
+}
+
+picture {
+	width: 100%;
+}
+
+@media (min-width: 600px) {
+	picture {
+		width: 80%; /* Зменшена ширина на великих екранах */
+		max-width: 800px;
+	}
+}
+
+@media (min-width: 1200px) {
+	picture {
+		width: 60%;
+		max-width: 1200px;
+	}
+}

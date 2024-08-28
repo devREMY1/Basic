@@ -4,12 +4,39 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Picture</title>
+		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
-		<picture>
+		<!-- <picture>
 			<source srcset="./slide1-mob.jpg" media="(min-width: 1024px)" />
 			<source srcset="./apple.png" media="(min-width: 600px)" />
 			<img src="./768.jpg" alt="discription" />
-		</picture>
+		</picture> -->
+
+		<div class="pic__wrapper">
+			<div class="pic__wrap-container">
+				<picture>
+					<source
+						srcset="./assets/large.webp"
+						media="(min-width: 1200px)"
+						type="image/webp"
+					/>
+
+					<source
+						srcset="./assets/medium.jpg"
+						media="(min-width: 600px)"
+						type="image/webp"
+					/>
+
+					<source
+						srcset="./assets/small.webp"
+						media="(max-width: 599px)"
+						type="image/webp"
+					/>
+
+					<img src="./assets/small.jpg" alt="Description of the image" />
+				</picture>
+			</div>
+		</div>
 	</body>
 </html>
