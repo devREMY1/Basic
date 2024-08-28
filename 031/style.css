@@ -31,7 +31,7 @@ picture {
 
 @media (min-width: 600px) {
 	picture {
-		width: 80%; /* Зменшена ширина на великих екранах */
+		width: 80%;
 		max-width: 800px;
 	}
 }
