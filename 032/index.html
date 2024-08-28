@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Canvas Animation</title>
+		<style>
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+			}
+			canvas {
+				display: block;
+				background: #f0f0f0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<canvas id="myCanvas" width="800" height="600"></canvas>
+		</div>
+		<script>
+			const canvas = document.getElementById('myCanvas')
+			const context = canvas.getContext('2d')
+
+			let x = 0
+			let size = 100
+			let color = 'blue'
+
+			function drawSquare() {
+				context.clearRect(0, 0, canvas.width, canvas.height)
+
+				const gradient = context.createLinearGradient(
+					x,
+					50,
+					x + size,
+					50 + size
+				)
+				gradient.addColorStop(0, color)
+				gradient.addColorStop(1, 'cyan')
+
+				context.fillStyle = gradient
+				context.fillRect(x, 50, size, size)
+
+				context.strokeStyle = 'red'
+				context.lineWidth = 3
+				context.beginPath()
+				context.moveTo(200, 50)
+				context.lineTo(300, 100)
+				context.stroke()
+
+				context.strokeStyle = 'green'
+				context.beginPath()
+				context.ellipse(150, 150, 50, 30, 0, 0, 2 * Math.PI)
+				context.stroke()
+
+				context.fillStyle = 'black'
+				context.font = '20px Arial'
+				context.fillText('hello Todor Academy', 200, 180)
+
+				x = x > canvas.width ? -size : x + 2
+				size = size >= 150 ? 100 : size + 1
+
+				requestAnimationFrame(drawSquare)
+			}
+
+			drawSquare()
+
+			canvas.addEventListener('click', () => {
+				color = color === 'blue' ? 'red' : 'blue'
+			})
+		</script>
+	</body>
+</html>
