@@ -28,6 +28,16 @@ body {
 	display: flex;
 }
 
+a {
+	text-decoration: none;
+	color: blueviolet;
+	font-weight: bold;
+}
+a:hover {
+	text-decoration: underline;
+	color: brown;
+}
+
 img {
 	border-radius: 20px;
 	max-width: 400px;
@@ -41,4 +51,16 @@ img {
 	font-size: 32px;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
 		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.description-container {
+	max-width: 1200px;
+	margin: 0 auto;
+
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-size: 20px;
+	border-radius: 20px;
+
+	padding: 20px;
 }
