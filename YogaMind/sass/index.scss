@@ -1419,6 +1419,8 @@ body {
     align-items: center;
     justify-content: space-between;
 
+    color: #111517;
+
     margin: 0 auto;
     max-width: 1300px;
 
@@ -1448,6 +1450,7 @@ body {
         padding: 0 0 20px 0;
 
         span:nth-child(1) {
+          padding: 0 16px 0 0;
           font-weight: 400;
         }
         span:nth-child(2) {
@@ -1519,7 +1522,12 @@ body {
       img {
         padding: 0 15px 0 0;
       }
-      span {
+      a {
+        text-decoration: underline;
+        color: #111517;
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
   }

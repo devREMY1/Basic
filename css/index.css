@@ -1486,6 +1486,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: #111517;
   margin: 0 auto;
   max-width: 1300px;
 }
@@ -1516,6 +1517,7 @@ body {
   padding: 0 0 20px 0;
 }
 .footerSectionWrapper .footerSection__leftBlock-workTime span:nth-child(1) {
+  padding: 0 16px 0 0;
   font-weight: 400;
 }
 .footerSectionWrapper .footerSection__leftBlock-workTime span:nth-child(2) {
@@ -1570,4 +1572,11 @@ body {
 }
 .footerSectionWrapper .footerSection__mapContainer img {
   padding: 0 15px 0 0;
+}
+.footerSectionWrapper .footerSection__mapContainer a {
+  text-decoration: underline;
+  color: #111517;
+}
+.footerSectionWrapper .footerSection__mapContainer a:hover {
+  text-decoration: none;
 }
