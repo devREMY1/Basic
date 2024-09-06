@@ -1762,3 +1762,60 @@ body {
 .footerSectionWrapper .footerSection__mapContainer a:hover {
   text-decoration: none;
 }
+
+.footerWrapper {
+  font-family: "Kyiv Type Sans", sans-serif;
+  background-color: #1f6c94;
+  color: #fff;
+  padding: 44px 0;
+}
+.footerWrapper .footer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 1023px) and (max-width: 1440px) {
+  .footerWrapper .footer {
+    max-width: calc(884px + (1300 - 884) * (100vw - 1023px) / (1440 - 1023));
+  }
+}
+@media (min-width: 320px) and (max-width: 1023px) {
+  .footerWrapper .footer {
+    max-width: calc(280px + (884 - 280) * (100vw - 320px) / (1023 - 320));
+  }
+}
+.footerWrapper .footer__title {
+  position: absolute;
+  left: 80px;
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+  .footerWrapper .footer__title {
+    left: 57px;
+  }
+}
+.footerWrapper .footer__title h1 {
+  font-size: 20px;
+  margin: 0;
+}
+@media (min-width: 320px) and (max-width: 750px) {
+  .footerWrapper .footer__title h1 {
+    font-size: calc(14px + (20 - 14) * (100vw - 320px) / (750 - 320));
+  }
+}
+.footerWrapper .footer__CopRight {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+@media (min-width: 320px) and (max-width: 1000px) {
+  .footerWrapper .footer__CopRight {
+    flex-direction: column;
+    gap: 17px;
+  }
+}
+.footerWrapper .footer__CopRight span {
+  font-size: 16px;
+  align-self: flex-end;
+}
