@@ -1462,7 +1462,7 @@ body {
         flex-direction: column-reverse;
       }
       &-schedule {
-        max-width: 304px;
+        max-width: 365px;
         // media
         @media (min-width: 320px) and (max-width: 750px) {
           max-width: values(270px, 304px, 320px, 750px);

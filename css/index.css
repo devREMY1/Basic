@@ -1533,7 +1533,7 @@ body {
   }
 }
 .footerSectionWrapper .footerSection__leftBlock-schedule {
-  max-width: 304px;
+  max-width: 365px;
 }
 @media (min-width: 320px) and (max-width: 750px) {
   .footerSectionWrapper .footerSection__leftBlock-schedule {
