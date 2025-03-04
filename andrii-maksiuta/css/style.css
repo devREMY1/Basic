@@ -1,0 +1,445 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+/*--------------------*/
+:root {
+	--instagram-text-gradient: linear-gradient(
+		45deg,
+		#405de6,
+		#5851db,
+		#833ab4,
+		#c13584,
+		#e1306c,
+		#fd1d1d
+	);
+}
+
+/* Создаем градиент для текстового цвета Telegram значка и сохраняем его в переменной */
+:root {
+	--telegram-text-gradient: linear-gradient(45deg, #0088cc, #00a8e0);
+}
+
+body {
+	background: #f1f1f1;
+	overflow-x: hidden;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2%;
+	height: 100vh;
+	font-family: Montserrat;
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+}
+
+.header__container {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+}
+.header__img {
+	width: 290px;
+	height: 300px;
+	border-radius: 20%;
+	padding: 2%;
+}
+.header__container-text {
+	display: flex;
+	flex-direction: column;
+	max-width: 100%;
+}
+.header__name {
+	font-size: 40px;
+	font-weight: 500;
+	padding: 0 0 5% 0;
+}
+.header__subscription {
+	padding: 0 0 5%;
+	font-size: 18px;
+	font-weight: 500;
+	color: #86898f;
+}
+.header__social {
+	padding: 0 0 2%;
+	font-size: 18px;
+	font-weight: 600;
+}
+.header__container-link {
+	font-weight: 550;
+}
+.header__lnk-inst {
+	transition: all 1s;
+	color: #303030;
+}
+.header__lnk-inst:active {
+	background: var(--instagram-text-gradient);
+	-webkit-background-clip: text;
+	color: transparent;
+	transition: all 0.1s;
+}
+.header__lnk-telegram {
+	transition: all 1s;
+	color: #303030;
+}
+.header__lnk-telegram:active {
+	background: var(--telegram-text-gradient);
+	-webkit-background-clip: text;
+	color: transparent;
+	transition: all 0.1s;
+}
+.header__gitContainer {
+	margin: 30px 0 0 0;
+}
+.header__gitContainer-lnk {
+	font-size: 24px;
+	font-weight: bold;
+	color: #303030;
+	text-decoration: none;
+}
+.header__gitContainer-lnk:active {
+	color: #30303049;
+}
+
+.title {
+	padding: 0 0 10px 0;
+	font-size: 24px;
+	font-weight: 450;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+}
+.main__container-edu {
+	background: #fff9dc;
+	border-radius: 20px;
+	padding: 2%;
+}
+.main__edu-list {
+	padding: 0 0 0 20px;
+	color: #86898f;
+	list-style: none;
+}
+.main__edu-item {
+	padding: 3px 0;
+}
+.main hr {
+	border: 0.1px solid #86898f;
+}
+.main__exp-subtitle {
+	font-size: 20px;
+	font-weight: bold;
+	padding: 1% 0 0 0;
+}
+.main__exp-list {
+	padding: 0 0 0 20px;
+	color: #86898f;
+	list-style: none;
+	padding: 1%;
+}
+.main__exp-item {
+	padding: 3px 0;
+}
+.main__container-hobby {
+	background: #fff9dc;
+	border-radius: 20px;
+	padding: 2%;
+	margin: 0 0 5% 0;
+}
+.main__hobby-subtitle {
+	color: #111;
+	font-weight: bold;
+}
+
+.main__hobby-subtitle:active {
+	color: #11111169;
+	font-weight: bold;
+}
+.main__hobby-list {
+	padding: 0 0 0 20px;
+	list-style: none;
+	color: #86898f;
+}
+.main__hobby-item {
+	padding: 1% 0;
+}
+.main__container-experience {
+	margin: 5% 0;
+	background: #e4ffdc;
+	border-radius: 20px;
+	padding: 2%;
+}
+.main__experience-block {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.main__container-youtube {
+	margin: 0 0 5% 0;
+	background: #ffdcdc;
+	border-radius: 20px;
+	padding: 2%;
+}
+.main__youtube-block {
+	display: flex;
+	flex-direction: column;
+}
+.main__video-container {
+	display: flex;
+	max-width: 100%;
+}
+.main__video {
+	position: relative;
+	width: 200px;
+	height: 150px;
+	margin-right: 10px;
+	transition: width 0.3s, height 0.3s;
+}
+.main__video iframe {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+.main__video img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	opacity: 0;
+}
+
+hr {
+	border: 0.5px solid #111;
+}
+
+.footer hr {
+	border: 0.5px solid #86898f;
+}
+.footer__container {
+	max-width: 1000px;
+	margin: 5% auto;
+	padding: 0 0 5% 0;
+}
+.footer__title {
+	font-weight: 600;
+	font-size: 27px;
+}
+.footer__form-input-block {
+	display: flex;
+	justify-content: space-between;
+	padding: 2% 0 2% 0;
+}
+.footer__form-name {
+	width: 50%;
+	margin: 0 5% 0 0;
+}
+.footer__form-email {
+	width: 50%;
+}
+.footer__form input:not(:last-child) {
+	background-color: #f1f1f1;
+	font-size: 20px;
+	width: 100%;
+	padding: 1% 0;
+}
+.footer__form textarea {
+	background-color: #f1f1f1;
+	width: 100%;
+	font-size: 20px;
+}
+.footer__form-button {
+	padding: 0.5% 2%;
+	color: white;
+	background: black;
+	border-radius: 10px;
+	font-size: 30px;
+	cursor: pointer;
+}
+.footer__form-button:active {
+	border: 1px solid black;
+	color: black;
+	background: none;
+	border-radius: 10px;
+	transition: all 0.1s;
+}
+.footer__form-success {
+	position: fixed;
+	bottom: 10%;
+	right: 1%;
+	font-weight: 500;
+	background: #7eff9c;
+	border-radius: 10px;
+	padding: 2%;
+	display: none;
+}
+.footer__form-clear {
+	position: fixed;
+	bottom: 10%;
+	right: 1%;
+	font-weight: 500;
+	background: #ff7e7e;
+	border-radius: 10px;
+	padding: 2%;
+	display: none;
+}
+.footer__form-clear-text {
+	position: fixed;
+	bottom: 10%;
+	right: 1%;
+	font-weight: 500;
+	background: #ff7e7e;
+	border-radius: 10px;
+	padding: 2%;
+	display: none;
+}
+
+@media (max-width: 700px) {
+	.wrapper {
+		max-width: 100%;
+		padding: 2%;
+		font-size: 15px;
+	}
+	.title {
+		padding: 0 0 10px 0;
+		font-size: 20px;
+		font-weight: 500;
+	}
+	.header__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		max-width: 100%;
+	}
+	.header__img {
+		max-width: 280px;
+		max-height: 290px;
+		border-radius: 20%;
+	}
+	.header__container-text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 100%;
+	}
+	.header__name {
+		font-size: 30px;
+		font-weight: 500;
+		padding: 0 0 5% 0;
+	}
+	.header__subscription {
+		padding: 0 0 5%;
+		text-align: center;
+		font-size: 15px;
+		font-weight: 500;
+		color: #86898f;
+	}
+	.header__social {
+		padding: 0 0 2%;
+		font-size: 18px;
+		font-weight: 600;
+	}
+	.header__container-link {
+		font-weight: bold;
+	}
+	.footer__form-button {
+		width: 100%;
+		padding: 2% 0;
+		font-size: 24px;
+	}
+}
