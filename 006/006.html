@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>006</title>
+	</head>
+	І<style>
+		body {
+			position: relative;
+			margin: 0;
+			font-family: Arial, sans-serif;
+			overflow-x: hidden;
+		}
+		.wrapper {
+			display: flex;
+			flex-direction: column;
+			max-width: 1600px;
+			margin: 0 auto;
+		}
+		.header {
+			background-color: #f0f0f0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0 20px;
+		}
+		.header__menu {
+			right: 0;
+			padding: 20px;
+			position: fixed;
+			top: 0;
+			font-size: 2em;
+			outline: 1px solid rgba(185, 185, 185, 0.712);
+			border-radius: 0 0 0 5px;
+			font-weight: bold;
+			background-color: rgba(200, 200, 200, 0.664);
+		}
+		.header__link {
+			display: inline-block;
+			text-decoration: none;
+			color: rgb(92, 92, 92);
+
+			transition: all 0.5s;
+		}
+		.header__link:hover {
+			color: brown;
+			transition: all 0.3s;
+			transform: scale(1.1);
+		}
+		.header__link:active {
+			color: rgb(92, 92, 92);
+			transform: scale(0.9);
+		}
+		.header__title {
+			left: 0;
+			position: absolute;
+			top: 0;
+			font-size: 2em;
+			margin: 20px;
+			display: block;
+			padding: 0 20px;
+		}
+		.body__article {
+			margin-top: 120px;
+		}
+		.main__body {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			padding: 70px 20px;
+		}
+		.title {
+			font-size: 2em;
+			margin-bottom: 10px;
+		}
+		.subtitle {
+			font-size: 1.5em;
+			margin-bottom: 20px;
+		}
+		.project-list {
+			margin-bottom: 30px;
+		}
+		.project-item {
+			margin-bottom: 10px;
+		}
+		.main__section-team {
+			margin-top: 20px;
+		}
+		.section-title {
+			font-size: 1.5em;
+			margin-bottom: 15px;
+		}
+		.team-list {
+			margin-bottom: 30px;
+		}
+		.team-member {
+			margin-bottom: 8px;
+		}
+		.table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+		.table__head {
+			background-color: #f8f8f8;
+		}
+		.table__header,
+		.table__data {
+			border: 1px solid #ddd;
+			padding: 8px;
+			text-align: left;
+		}
+		.table__row:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+		.footer {
+			width: 100%;
+			height: 100px;
+			background-color: #f0f0f0;
+		}
+	</style>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<h1 class="header__title">006</h1>
+				<nav class="header__menu">
+					<a href="005.html" class="header__link" title="link project 005"
+						>005</a
+					>
+					<a href="007.html" class="header__link" itle="link project 007"
+						>007</a
+					>
+				</nav>
+			</header>
+			<article class="body__article">
+				<h2 class="title">Project Overview</h2>
+				<p class="body__text">
+					This project is designed to showcase the team members and their roles
+					within the Todor Academy Project.<br />
+					Below is a list of functions and a table detailing each member's role.
+				</p>
+			</article>
+			<main class="main__body">
+				<h2 class="subtitle">Todor Academy Project</h2>
+				<aside class="project-list">
+					<ul>
+						<li class="project-item">Function 1</li>
+						<li class="project-item">Function 2</li>
+						<li class="project-item">Function 3</li>
+					</ul>
+				</aside>
+				<section class="main__section-team">
+					<h2 class="section-title">Team Members</h2>
+					<ul class="team-list">
+						<li class="team-member">Member 1</li>
+						<li class="team-member">Member 2</li>
+						<li class="team-member">Member 3</li>
+					</ul>
+
+					<table class="table">
+						<thead class="table__head">
+							<tr class="table__row">
+								<th class="table__header" scope="col">Name</th>
+								<th class="table__header" scope="col">Role</th>
+							</tr>
+						</thead>
+						<tbody class="table__body">
+							<tr class="table__row">
+								<td class="table__data">Member 1</td>
+								<td class="table__data">Developer</td>
+							</tr>
+							<tr class="table__row">
+								<td class="table__data">Member 2</td>
+								<td class="table__data">Developer</td>
+							</tr>
+							<tr class="table__row">
+								<td class="table__data">Member 3</td>
+								<td class="table__data">Owner</td>
+							</tr>
+							<tr class="table__row">
+								<td class="table__data">Member 4</td>
+								<td class="table__data">Manager</td>
+							</tr>
+							<tr class="table__row">
+								<td class="table__data">Member 5</td>
+								<td class="table__data">Helper</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</main>
+			<footer class="footer"></footer>
+		</div>
+	</body>
+</html>
