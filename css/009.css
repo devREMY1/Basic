@@ -1,0 +1,99 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex: 1;
+  display: flex;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+}
+
+.main__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.header {
+  height: 60px;
+  background-color: #525252;
+}
+
+.input__name {
+  padding: 5px;
+  border-radius: 5px;
+  border: 0.5px solid black;
+}
+.input__first-name {
+  padding: 5px;
+  border-radius: 5px;
+  border: 0.5px solid black;
+}
+.input__email {
+  padding: 5px;
+  border-radius: 5px;
+  border: 0.5px solid black;
+}
+.input__password {
+  padding: 5px;
+  border-radius: 5px;
+  border: 0.5px solid black;
+}
+.input__button {
+  padding: 5px 10px;
+  border: none;
+  outline: 0.5px solid black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.6s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: medium;
+  cursor: pointer;
+}
+.input__button:hover {
+  color: white;
+  background-color: #525252;
+  transition: all 0.4s;
+  outline: none;
+}
+
+.list {
+  gap: 20px;
+  display: flex;
+}
+.list__item {
+  list-style: none;
+}
+.list__text {
+  color: white;
+  text-decoration: none;
+}
+.list__text:hover {
+  color: rgba(255, 255, 255, 0.7333333333);
+}
+
+.footer {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: medium;
+  background-color: #525252;
+}

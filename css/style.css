@@ -75,28 +75,20 @@ body {
 }
 
 .btn-gradient-1 {
-  background-color: #5faee3;
+  background-color: rgb(95.3179916318, 173.9790794979, 226.6820083682);
 }
 
 .btn-gradient-2 {
-  background-color: #8bc4ea;
+  background-color: rgb(138.6359832636, 195.9581589958, 234.3640167364);
 }
 
 .btn-gradient-3 {
-  background-color: #b6daf2;
+  background-color: rgb(181.9539748954, 217.9372384937, 242.0460251046);
 }
 
 .btn-conditional {
   background-color: #3498db;
-}s: center;
-  border-radius: 5px;
-  border: 2px solid black;
-  margin: 50px 0 0 0;
-}
-.tips__title {
-  font-size: 20px;
-}
-.tips__text {
+} {
   text-align: center;
   font-size: 20px;
 }

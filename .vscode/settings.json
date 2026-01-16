@@ -1,3 +1,7 @@
 {
-	"svg.preview.background": "transparent"
+	"svg.preview.background": "transparent",
+	"emmet.triggerExpansionOnTab": true,
+	"emmet.showExpandedAbbreviation": "always",
+	"editor.formatOnSave": true,
+	"editor.linkedEditing": true
 }

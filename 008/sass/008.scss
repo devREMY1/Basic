@@ -1,0 +1,436 @@
+/* =========================
+   RESET / NORMALIZE
+   ========================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; // 16px
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Ubuntu,
+    Cantarell,
+    "Helvetica Neue",
+    sans-serif;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================
+   MEDIA
+   ========================= */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================
+   FORMS
+   ========================= */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   TEXT
+   ========================= */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   LISTS
+   ========================= */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* =========================
+   TABLE
+   ========================= */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* =========================
+   ACCESSIBILITY
+   ========================= */
+
+:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+/* =========================
+   ROOT APP WRAPPER
+   ========================= */
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* =========================
+   BASE STYLES
+   ========================= */
+
+body {
+  margin: 0;
+  background-color: #d2dbc4;
+  color: #111;
+}
+
+::selection {
+  background: #000;
+  color: #fff;
+}
+
+.wrapper {
+  padding: 0 15px;
+  max-width: 1700px;
+  margin: 0 auto;
+  @media (min-width: 1025px) and (max-width: 1700px) {
+    max-width: calc(1000px + (1700 - 1000) * ((100vw - 1025px) / (1700 - 1025)));
+  }
+  @media (min-width: 770px) and (max-width: 1000px) {
+    max-width: calc(600px + (1000 - 600) * ((100vw - 770px) / (1000 - 600)));
+  }
+}
+
+.header {
+  width: 100%;
+  height: 158px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #2e4432;
+  &__logo-img {
+    width: 79px;
+    height: 76px;
+  }
+  &__logo-title:hover {
+    color: #8fad6a;
+  }
+  &__logo-title {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Cinzel;
+
+    color: #ffffff;
+  }
+}
+
+.menu {
+  width: 100%;
+  &__list {
+    gap: 20px;
+    padding: 0 50px 0 0;
+    display: flex;
+    justify-content: end;
+
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Cinzel;
+
+    color: #ffffff;
+  }
+  &__list-item {
+  }
+  &__list-item-lnk {
+  }
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  color: #516151;
+}
+
+.baner {
+  &__wrapper {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+  }
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    font-family: Cinzel;
+    font-weight: bold;
+    font-size: 65px;
+    width: 850px;
+  }
+  &__text {
+    font-family: EB Garamond;
+    font-weight: medium;
+    font-size: 36px;
+    width: 850px;
+  }
+  &__btn-lnk {
+    max-width: 330px;
+    margin-top: 36px;
+    padding: 17px 56px;
+    border-radius: 100px 10px 100px 10px;
+
+    display: flex;
+    justify-content: center;
+
+    color: #fff;
+    font-size: 36px;
+    font-family: Uncial Antiqua;
+    background-color: #8fad6a;
+  }
+
+  &__img-container {
+    width: 100%;
+    margin-right: 130px;
+
+    display: flex;
+    justify-content: end;
+  }
+  &__img {
+    max-width: 544px;
+    max-height: 644px;
+  }
+}
+
+.legend {
+  &__wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #f2f2f2;
+  }
+  &__text-container {
+    width: 100%;
+    z-index: 100;
+  }
+  &__title {
+    font-family: Cenzil;
+    font-size: 75px;
+    font-weight: bold;
+
+    line-height: 70px;
+
+    color: #516151;
+  }
+  &__subtitle {
+    padding-top: 76px;
+
+    font-family: EB Garamond;
+    font-size: 22px;
+    font-weight: bold;
+
+    color: #516151;
+  }
+  &__bg-img {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    right: 0;
+    height: 100%;
+  }
+}
+
+// Products Card List
+
+.products {
+  &__wrapper {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__title {
+    margin: 112px 0 50px 0;
+
+    font-family: Cinzel;
+    font-size: 75px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    color: #516151;
+  }
+  &__title::before,
+  &__title::after {
+    content: "";
+
+    flex: 1;
+    height: 5px;
+
+    background-color: #516151;
+  }
+  &__card-list {
+    display: flex;
+    gap: 63px;
+
+    padding-bottom: 37px;
+  }
+  &__card {
+    width: 100%;
+    padding: 27px 31px 27px 25px;
+
+    display: flex;
+
+    border-radius: 20px;
+    background-color: #ffffff;
+  }
+  &__card-img {
+    max-width: 435px;
+    max-height: 510px;
+  }
+  &__card-text-container {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    padding: 0 0 0 25px;
+  }
+  &__card-title {
+    max-width: 300px;
+    padding: 0 0 11px 0;
+
+    font-family: Cinzel;
+    font-size: 29px;
+    font-weight: bold;
+  }
+  &__card-sale {
+    padding: 7px 16px;
+    max-width: 169px;
+    text-align: center;
+    border-radius: 10px;
+
+    font-size: 18px;
+    font-family: Cenzil;
+
+    color: #ffffff;
+    background-color: #8fad6a;
+  }
+  &__card-subtitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100%;
+    padding-top: 21px;
+
+    font-size: 22px;
+    font-family: EB Garamond;
+  }
+  &__card-price {
+    padding-bottom: 22px;
+
+    font-size: 30px;
+    font-family: Cinzel;
+    font-weight: bold;
+  }
+  &__card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+    padding: 12.5px;
+
+    font-size: 28px;
+    font-family: Uncial Antiqua;
+
+    color: #ffffff;
+    border-radius: 15px;
+    background-color: #8fad6a;
+  }
+  &__card-btn-icon-container {
+  }
+  &__card-btn-icon {
+  }
+  &__nex-page-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__next-page-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 410px;
+    padding: 23.5px 93px;
+
+    font-size: 30px;
+    font-family: Uncial Antiqua;
+
+    color: #ffffff;
+    border-radius: 15px;
+    background-color: #8fad6a;
+  }
+  &__nex-page-btn-row {
+    height: 100%;
+    position: absolute;
+    right: 15%;
+    top: 23%;
+  }
+}

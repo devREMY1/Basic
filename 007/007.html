@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>007</title>
+	</head>
+	<style>
+		body {
+			margin: 0;
+			overflow-x: hidden;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		.header {
+			margin: 0;
+			padding: 0 20px;
+			width: 100%;
+			height: 100px;
+			background-color: #c38f6f;
+
+			display: flex;
+			justify-content: start;
+			align-items: center;
+		}
+		.header__logo-lnk {
+			margin: 0;
+			text-decoration: none;
+			transition: all 0.6s;
+
+			color: #4f443e;
+		}
+		.header__logo-lnk:hover {
+			transition: all 0.3s;
+
+			color: azure;
+		}
+		.header__logo-lnk:active {
+			transition: all 0.3s;
+
+			color: #4f443e;
+		}
+		.header__logo-lnk-title {
+			margin: 0;
+		}
+		.main-content {
+			padding: 0 40px;
+			position: relative;
+		}
+		.main-content__header-title {
+			padding: 300px 0 0 0;
+		}
+		.content {
+			margin: 0 auto;
+		}
+
+		.content__img {
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%);
+			width: 100%;
+			height: 300px;
+
+			background-image: url('https://i.imgur.com/PE4hr5H.jpeg');
+			background-size: auto;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.nav-buttons__container {
+			display: flex;
+			flex-direction: column-reverse;
+			max-width: 300px;
+		}
+		.nav-buttons__input-container {
+			display: flex;
+		}
+
+		button {
+			padding: 10px 20px;
+			background-color: #c38f6f;
+			color: #4f443e;
+			font-weight: bold;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		button:hover {
+			background-color: #a7795dde;
+		}
+		input[type='range'] {
+			width: 200px;
+			margin: 10px 0;
+		}
+		input[type='radio'] {
+			margin: 0 10px 0 0;
+		}
+		input[type='text'],
+		input[type='password'] {
+			padding: 8px;
+			margin: 5px 0;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			font-size: 14px;
+			width: 200px;
+		}
+	</style>
+	<body>
+		<header class="header">
+			<a href="./007.html" class="header__logo-lnk">
+				<h1 class="header__logo-lnk-title">Hello World</h1>
+			</a>
+		</header>
+		<main class="main-content">
+			<div class="content__img"></div>
+			<div class="main-content__header-title">
+				<h2 class="main-content__title">Welcome to the page</h2>
+				<p class="main-content__subtitle">
+					This is a sample paragraph to demonstrate HTML structure.
+				</p>
+			</div>
+			<hr />
+			<section class="content">
+				<br />
+				<h3 class="content__title">Subtitle Here</h3>
+				<p class="content__subtitle">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br />
+					Explicabo deserunt adipisci vitae, quisquam voluptas, modi
+					voluptatibus assumenda vel ipsa <br />
+					tempore nisi sit qui earum quaerat odio blanditiis possimus nostrum
+					consequatur.
+				</p>
+				<nav class="nav-buttons__container">
+					<button class="nav-buttons__btn">Click Me!</button>
+
+					<input
+						class="nav-buttons__inpt"
+						type="range"
+						value="10"
+						min="0"
+						max="25"
+					/>
+					<div class="nav-buttons__input-container">
+						<input class="nav-buttons__inpt" type="radio" />
+						<input class="nav-buttons__inpt" type="radio" />
+						<input class="nav-buttons__inpt" type="radio" />
+					</div>
+
+					<input class="nav-buttons__inpt" type="text" />
+					<input class="nav-buttons__inpt" type="password" />
+				</nav>
+			</section>
+		</main>
+	</body>
+</html>
