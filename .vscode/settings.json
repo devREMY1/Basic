@@ -1,5 +1,5 @@
 {
-	"svg.preview.background": "transparent",
+	"svg.preview.background": "dark-transparent",
 	"emmet.triggerExpansionOnTab": true,
 	"emmet.showExpandedAbbreviation": "always",
 	"editor.formatOnSave": true,
