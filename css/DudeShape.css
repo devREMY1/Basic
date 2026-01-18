@@ -434,15 +434,35 @@ body {
   justify-content: center;
   padding: 0 0 140px 0;
 }
+.furniture__title {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Montserrat" sans-serif;
+}
 .furniture__tabs {
   display: flex;
   gap: 100px;
+  padding: 0 0 80px 0;
 }
 .furniture__content {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  z-index: 100;
+}
+.furniture__content-background {
+  position: absolute;
+  width: 552px;
+  height: 389px;
+  left: -34px;
+  top: -18px;
+  z-index: 1;
+  background-color: #154444;
+}
+.furniture__image {
+  z-index: 100;
 }
 
 .tab {
@@ -530,6 +550,85 @@ body {
   width: 550px;
   height: 400px;
   transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 100;
+}
+
+.review {
+  display: flex;
+  padding: 0 0 140px 0;
+}
+.review__imgContainer {
+  position: relative;
+  display: flex;
+  padding: 0 80px 0 0;
+}
+.review__imgContainer-img {
+  max-width: 459px;
+  max-height: 492px;
+  z-index: 2;
+}
+.review__imgContainer-backgroundElement {
+  width: 492px;
+  height: 492px;
+  position: absolute;
+  left: -131px;
+  border-radius: 50%;
+  background-color: #244d4d;
+}
+.review__textContainer {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.review__textContainer-title {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Montserrat" sans-serif;
+  line-height: 48px;
+}
+.review__textContainer-subtitle {
+  font-size: 20px;
+  font-weight: normal;
+  font-family: "DM Sans" sans-serif;
+  line-height: 27px;
+  color: #383738;
+}
+.review__textContainer-person {
+  display: flex;
+  gap: 10px;
+}
+.review__textContainer-person-img {
+  max-width: 50px;
+  max-height: 50px;
+}
+.review__textContainer-person-textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.review__textContainer-person-textContainer-name {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "DM Sans" sans-serif;
+  line-height: 19px;
+  color: #000;
+}
+.review__textContainer-person-textContainer-balContainer {
+  display: flex;
+  gap: 8px;
+}
+.review__textContainer-person-textContainer-balContainer-img {
+  max-width: 16px;
+  max-height: 15.33px;
+}
+.review__textContainer-person-textContainer-balContainer-text {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "DM Sans" sans-serif;
+  line-height: 15px;
+  color: #000;
 }
 
 .footer {
