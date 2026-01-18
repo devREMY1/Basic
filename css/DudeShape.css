@@ -555,6 +555,8 @@ body {
 
 .review {
   display: flex;
+  width: 100%;
+  justify-content: flex-end;
   padding: 0 0 140px 0;
 }
 .review__imgContainer {
@@ -629,6 +631,69 @@ body {
   font-family: "DM Sans" sans-serif;
   line-height: 15px;
   color: #000;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 140px 0;
+  padding: 65px 0;
+  width: 100%;
+  background-color: #305f64;
+}
+.subscribe__title {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Montserrat" sans-serif;
+  line-height: 48px;
+  color: #fff;
+  padding: 0 0 20px 0;
+  text-align: center;
+}
+.subscribe__subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "DM Sans" sans-serif;
+  line-height: 26px;
+  color: #fff;
+  padding: 0 0 50px 0;
+  text-align: center;
+}
+.subscribe__inputBlock {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.subscribe__inputBlock-input {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "DM Sans" sans-serif;
+  line-height: 22px;
+  color: rgba(127, 127, 127, 0.7137254902);
+  position: relative;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 22px 45px 22px 45px;
+  width: 472px;
+}
+.subscribe__inputBlock-btn {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "DM Sans" sans-serif;
+  line-height: 22px;
+  color: #fff;
+  background-color: #ffb624;
+  padding: 15px 32px;
+  position: absolute;
+  right: 20px;
+  border-radius: 10px;
+}
+.subscribe__inputBlock-icon {
+  position: absolute;
+  left: 18px;
+  border-radius: 10px;
 }
 
 .footer {
