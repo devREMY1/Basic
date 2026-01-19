@@ -87,6 +87,18 @@ fieldset {
   outline: none;
 }
 
+@function values($min-value, $max-value, $min-viewport, $max-viewport) {
+  $min-width-value: $min-value / 1px;
+  $max-width-value: $max-value / 1px;
+  $min-viewport-value: $min-viewport / 1px;
+  $max-viewport-value: $max-viewport / 1px;
+
+  @return calc(
+    #{$min-width-value}px + (#{$max-width-value} - #{$min-width-value}) *
+      ((100vw - #{$min-viewport-value}px) / (#{$max-viewport-value} - #{$min-viewport-value}))
+  );
+}
+
 html,
 body {
   height: 100%;
@@ -152,6 +164,12 @@ body {
   margin: 0 auto;
   max-width: 1200px;
   position: relative;
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    max-width: calc(1025px + (1200 - 1025) * ((100vw - 1025px) / (1200 - 1025)));
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    max-width: calc(768px + (1024 - 768) * ((100vw - 768px) / (1024 - 768)));
+  }
 }
 
 .main {
@@ -165,14 +183,44 @@ body {
 
   display: flex;
   align-items: center;
+  @media (min-width: 300px) and (max-width: 1023px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    height: auto;
+  }
 
   &__imgContainer {
     display: flex;
     justify-content: flex-end;
     width: 1200px;
+    @media (min-width: 300px) and (max-width: 1023px) {
+      width: 100%;
+    }
     &-img {
       max-width: 972px;
       max-height: 700px;
+      @media (min-width: 300px) and (max-width: 1023px) {
+        display: none;
+      }
+    }
+    &-imgMob {
+      display: none;
+      @media (min-width: 800px) and (max-width: 1023px) {
+        display: flex;
+        width: 309px;
+        height: 100%;
+        margin: 0;
+        left: 0;
+        position: absolute;
+      }
+      @media (min-width: 300px) and (max-width: 800px) {
+        display: flex;
+        width: 309px;
+        height: 326px;
+        padding: 40px 0 0 0;
+      }
     }
   }
 
@@ -186,8 +234,46 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 
     background-color: #154444;
+    @media (min-width: 800px) and (max-width: 1023px) {
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row-reverse;
+      left: 0;
+      width: 100%;
+      padding: 0 139px 0 0;
+    }
+    @media (min-width: 300px) and (max-width: 800px) {
+      position: inherit;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      padding: 49px 24px 0 24px;
+    }
+
+    &-btnContainer {
+      display: none;
+      @media (min-width: 300px) and (max-width: 1023px) {
+        display: block;
+        padding: 30px 0 0 0;
+      }
+      &-btn {
+        font-size: 14px;
+        font-weight: normal;
+        font-family: "DM Sans" sans-serif;
+
+        padding: 10px 32px;
+        background-color: #ffff;
+        @media (min-width: 300px) and (max-width: 1023px) {
+          font-size: 12px;
+        }
+      }
+    }
 
     &-title {
       padding: 0 0 40px 0;
@@ -197,6 +283,10 @@ body {
       font-family: "Montserrat" sans-serif;
 
       color: #fcfbff;
+      @media (min-width: 300px) and (max-width: 1023px) {
+        font-size: 32px;
+        padding: 0 0 0 0;
+      }
     }
     &-subtitle {
       font-size: 20px;
@@ -204,6 +294,11 @@ body {
       font-family: "DM Sans" sans-serif;
 
       color: #fcfbff;
+      @media (min-width: 300px) and (max-width: 1023px) {
+        font-size: 12px;
+        padding: 12px 0 0 0;
+      }
+      padding: 49px 24px 0 24px;
     }
   }
 }
